@@ -8,17 +8,12 @@ import PostsComponent from "./PostsComponent";
 function HomeComponent () {
 
     return(
-        
+        <>
         <div className="page-wrapper">
             <IndexComponent />
         </div>
+        </>
         )
-        
-    
-        {/* <main id="main">
-            <PostsComponent />
-        </main> */}
-    {/* ) */}
 }
 
 export default HomeComponent;

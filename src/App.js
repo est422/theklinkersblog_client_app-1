@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import HomeComponent from './components/HomeComponent';
 import IndexComponent from './components/IndexComponent';

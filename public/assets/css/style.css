@@ -397,13 +397,104 @@ h6 {
   display: block;
 }
 
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.carousel-caption > h1 {
+  color: #fff;
+}
+
+.theme-btn, .theme-btn-s2, .theme-btn-s3 {
+  background-color: #fd5f17;
+  color: #fff;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 17px 30px;
+  margin: 10px;
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  display: inline-block;
+  line-height: initial;
+}
+
+.theme-btn:hover, .theme-btn-s2:hover, .theme-btn-s3:hover, .theme-btn:focus, .theme-btn-s2:focus, .theme-btn-s3:focus, .theme-btn:active, .theme-btn-s2:active, .theme-btn-s3:active {
+  background-color: #f84f02;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .theme-btn, .theme-btn-s2, .theme-btn-s3 {
+    font-size: 13px;
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme-btn, .theme-btn-s2, .theme-btn-s3 {
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+}
+
+.theme-btn-s2, .theme-btn-s3 {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #131e4a;
+}
+
+.theme-btn-s3 {
+  border: 2px solid #fd5f17;
+  padding: 15px 30px;
+}
+
+@media (max-width: 991px) {
+  .theme-btn-s3 {
+    font-size: 13px;
+    padding: 13px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme-btn-s3 {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 60vh;
-  background: url("../img/hero-bg.jpg") center center;
+  /* background: url("../img/hero-bg.jpg") center center; */
   background-size: cover;
   position: relative;
   z-index: 1;
