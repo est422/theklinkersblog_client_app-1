@@ -664,6 +664,7 @@ h6 {
 --------------------------------------------------------------*/
 .clients {
   padding: 10px;
+  background-color: #fff9f7;
 }
 
 .clients .client-logo {
@@ -684,6 +685,366 @@ h6 {
 
 .clients img {
   transition: all 0.4s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Values
+--------------------------------------------------------------*/
+.values {
+  background-color: #fff9f7;
+}
+
+.values .card {
+  border: 0;
+  padding: 160px 20px 20px 20px;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.values .card-body {
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  transition: ease-in-out 0.4s;
+  border-radius: 5px;
+}
+
+.values .card-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.values .card-title a {
+  color: #473d3a;
+}
+
+.values .card-text {
+  color: #4b4949;
+}
+
+.values .read-more a {
+  color: #656262;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
+  transition: 0.4s;
+}
+
+.values .read-more a:hover {
+  text-decoration: underline;
+}
+
+.values .card:hover .card-body {
+  background: #ff5821;
+}
+
+.values .card:hover .read-more a,
+.values .card:hover .card-title,
+.values .card:hover .card-title a,
+.values .card:hover .card-text {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #313030;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #ff5821;
+  background: #fff1ed;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  opacity: 1;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  /* z-index: 3; */
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 18px;
+  color: #131e4a;
+  font-weight: 600;
+  color: #131e4a;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #131e4a;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  position: absolute;
+  right: 40px;
+  font-size: 24px;
+  top: calc(50% - 18px);
+  color: #635551;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  color: #ff5821;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+.portfolio .portfolio-item .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-links a:hover {
+  color: #ffa587;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+  bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team {
+  background-color: #fff9f7;
+}
+
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #473d3a;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .member .social a:hover {
+  color: #ff5821;
+}
+
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.team .member .member-info {
+  padding: 25px 15px;
+}
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #131e4a;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #989595;
+}
+
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #656262;
+}
+
+.team .member:hover .social {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+#1.6	cta-section
+--------------------------------------------------------------*/
+.cta-section {
+  background: #fff9f7;
+  padding: 70px 0 60px;
+}
+
+.cta-section h3,
+.cta-section h4 {
+  color: #050505;
+  margin: 0;
+}
+
+.cta-section p {
+  color: #050505;
+  margin: 0;
+}
+
+.cta-section h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin: 0 0 0.6em;
+}
+
+@media (max-width: 991px) {
+  .cta-section h3 {
+    font-size: 25px;
+    font-size: 1.5625rem;
+  }
+}
+
+.cta-section .contact-info {
+  overflow: hidden;
+  float: right;
+}
+
+@media (max-width: 991px) {
+  .cta-section .contact-info {
+    float: none;
+  }
+}
+
+.cta-section .contact-info > div {
+  float: left;
+  position: relative;
+  padding-left: 60px;
+  padding-bottom: 5px;
+  padding-top: 25px;
+}
+
+@media (max-width: 991px) {
+  .cta-section .contact-info > div {
+    padding-left: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cta-section .contact-info > div {
+    float: none;
+  }
+}
+
+.cta-section .contact-info > div + div {
+  margin-left: 55px;
+}
+
+@media (max-width: 400px) {
+  .cta-section .contact-info > div + div {
+    margin-left: 0;
+  }
+}
+
+.cta-section .contact-info i {
+  position: absolute;
+  left: 0;
+}
+
+.cta-section .contact-info .fi:before {
+  font-size: 45px;
+  font-size: 2.8125rem;
+  color: #fd5f17;
+}
+
+@media (max-width: 991px) {
+  .cta-section .contact-info .fi:before {
+    font-size: 35px;
+    font-size: 2.1875rem;
+  }
+}
+
+.cta-section .contact-info h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin: 0 0 0.3em;
+}
+
+@media (max-width: 991px) {
+  .cta-section .contact-info h4 {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1030,6 +1391,7 @@ section {
 # Our Services
 --------------------------------------------------------------*/
 .services .icon-box {
+  /* height: 50vh; */
   text-align: center;
   border: 1px solid #ededed;
   padding: 80px 20px;
@@ -1104,6 +1466,97 @@ section {
 .services .icon-box:hover h4 a,
 .services .icon-box:hover p {
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+#2.1	features-section
+--------------------------------------------------------------*/
+.features-section {
+  margin-top: -131px;
+}
+
+@media (max-width: 991px) {
+  .features-section {
+    margin: 90px 0 0;
+  }
+}
+
+.features-section .feature-grids .grid {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 33.33%;
+  float: left;
+  padding: 35px 25px 35px 100px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .features-section .feature-grids .grid {
+    background-color: #fff;
+    padding: 35px 25px;
+    text-align: center;
+    -webkit-box-shadow: 0px 5px 47.2px 11.8px rgba(19, 30, 74, 0.1);
+    box-shadow: 0px 5px 47.2px 11.8px rgba(19, 30, 74, 0.1);
+  }
+}
+
+@media (max-width: 767px) {
+  .features-section .feature-grids .grid {
+    width: 100%;
+    float: left;
+  }
+}
+
+.features-section .feature-grids > .grid + .grid {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.features-section .fi:before {
+  font-size: 50px;
+  font-size: 3.125rem;
+  color: #fd5f17;
+}
+
+.features-section .icon {
+  position: absolute;
+  left: 35px;
+  color: #fd5f17;
+}
+
+@media (max-width: 991px) {
+  .features-section .icon {
+    position: relative;
+    left: auto;
+  }
+}
+
+.features-section .count {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .features-section .count {
+    color: #131e4a;
+  }
+}
+
+.features-section h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .features-section h4 {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #131e4a;
+    margin: 0.7em 0 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1187,7 +1640,7 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .testimonials-carousel,
+/* .testimonials .testimonials-carousel,
 .testimonials .testimonials-slider {
   overflow: hidden;
 }
@@ -1244,12 +1697,12 @@ section {
   font-style: italic;
   margin: 15px 0 0 0;
   padding: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Our Skills
 --------------------------------------------------------------*/
-.skills .content h3 {
+/* .skills .content h3 {
   font-weight: 700;
   font-size: 26px;
   color: #545454;
@@ -1307,12 +1760,12 @@ section {
   height: 10px;
   transition: 0.9s;
   background-color: #fd5f17;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+/* .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
 
@@ -1466,12 +1919,12 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+/* .portfolio-details {
   padding-top: 40px;
 }
 
@@ -1531,12 +1984,12 @@ section {
 
 .portfolio-details .portfolio-description p {
   padding: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
-.pricing .row {
+/* .pricing .row {
   padding-top: 40px;
 }
 
@@ -1647,12 +2100,12 @@ section {
     max-width: 100%;
     margin: 0 auto 30px auto;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team .member {
+/* .team .member {
   text-align: center;
   margin-bottom: 20px;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
@@ -1701,7 +2154,7 @@ section {
 .team .member .social i {
   font-size: 18px;
   margin: 0 2px;
-}
+} */
 
 /*--------------------------------------------------------------
 # Contact

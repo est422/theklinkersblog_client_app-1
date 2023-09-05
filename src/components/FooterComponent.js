@@ -3,7 +3,7 @@ function FooterComponent () {
     return(
         <>
         <footer id="footer">
-            <div className="footer-newsletter">
+            {/* <div className="footer-newsletter">
                 <div className="container">
                     <div className="row">
                     <div className="col-lg-6">
@@ -17,54 +17,38 @@ function FooterComponent () {
                     </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className="col-lg-4 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            <li><i className="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
+                            <li><i className="bx bx-chevron-right"></i> <a href="#">Products</a></li>
+                            <li><i className="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
+                            <li><i className="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-links">
-                            <h4>Our Services</h4>
-                            <ul>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                            </ul>
-                        </div>
-
-                        <div className="col-lg-3 col-md-6 footer-contact">
-                            <h4>Contact Us</h4>
+                        <div className="col-lg-4 col-md-6 footer-contact">
+                            <h4>Our Address</h4>
                             <p>
-                            A108 Adam Street <br />
-                            New York, NY 535022<br />
-                            United States <br /><br />
-                            <strong>Phone:</strong> +1 5589 55488 55<br />
-                            <strong>Email:</strong> info@example.com<br />
+                            Infront of Sahelete Meheret Square, Drar Mall 9th Floor, Addis Ababa, Ethiopia <br /><br />
+                            <strong>Phone:</strong> +251 116 61 0160<br />
+                            <strong>Email:</strong> sales@theklinkers.et<br />
                             </p>
 
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-info">
-                            <h3>About Us</h3>
-                            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                        <div className="col-lg-4 col-md-6 footer-info">
+                            <h4>About Us</h4>
+                            <p>Our mother company EKT Trade and investment is one of the pioneers in import & export business in Ethiopia.</p>
                             <div className="social-links mt-3">
-                            <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
+                            <a href="#" className="youtube"><i className="bx bxl-youtube"></i></a>
                             <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
-                            <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
-                            <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
                             <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                         </div>
                     </div>
@@ -75,14 +59,7 @@ function FooterComponent () {
 
                 <div className="container">
                 <div className="copyright">
-                    &copy; Copyright <strong><span>Lorem</span></strong>. All Rights Reserved
-                </div>
-                <div className="credits">
-                    All the links in the footer should remain intact. 
-                    You can delete the links only if you purchased the pro version. 
-                    Licensing information: https://bootstrapmade.com/license/ 
-                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/ 
-                    Designed by <a href="https://bootstrapmade.com/">Lorem ipsum dolor sit</a> 
+                    <strong><span>Design By</span></strong> Dawit Bahre
                 </div>
                 </div>
         </footer>
