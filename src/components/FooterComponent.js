@@ -58,7 +58,7 @@ function FooterComponent () {
             </div>
 
                 <div className="container">
-                <div className="copyright">
+                <div className="copyright text-center">
                     <strong><span>Design By</span></strong> Dawit Bahre
                 </div>
                 </div>

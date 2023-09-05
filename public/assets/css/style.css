@@ -106,12 +106,16 @@ h6 {
   color: #ff5821;
 }
 
-#topbar .cta a {
-  color: #fff;
-  background: #ff5821;
-  padding: 10px 20px;
-  display: inline-block;
+#topbar .social-links a {
+  color: #bababa;
+  width: 40px;
+  line-height: 0;
   transition: 0.3s;
+  margin-left: 10px;
+}
+
+#topbar .social-links a:hover {
+  color: white;
 }
 
 #topbar .cta a:hover {
@@ -802,7 +806,7 @@ section {
 }
 
 .about .video-box {
-  background: url("../img/about-img.jpg") center center no-repeat;
+  /* background: url("../img/about-img.jpg") center center no-repeat; */
   background-size: cover;
   min-height: 500px;
 }
@@ -884,6 +888,44 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
+}
+
+.about-us-section .btns {
+  margin-top: 30px;
+}
+
+.about-us-section .btns > a {
+  margin-right: 10px;
+}
+
+.about-us-section .right-col {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .about-us-section .right-col {
+    margin-top: 60px;
+  }
+}
+
+.about-us-section .video-holder {
+  width: 100%;
+  background-color: #fd5f17;
+  padding: 8px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-width: 600px;
+}
+
+.about-us-section .video-holder a {
+  color: #fff;
+}
+
+.about-us-section .video-holder i {
+  display: inline-block;
+  padding-right: 8px;
 }
 
 /*--------------------------------------------------------------

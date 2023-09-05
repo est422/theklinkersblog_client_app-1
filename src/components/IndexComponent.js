@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import AboutUsComponent from "./AboutUsComponent";
 
 function IndexComponent () {
 
@@ -83,42 +85,8 @@ function IndexComponent () {
                       </div>
                   </div> 
               </section> */}
-            <section className="about-us-section section-padding">
-                <div className="container">
-                    <div className="row">
-                        <div className="col col-md-6">
-                            <div className="section-title">
-                            <h2>About us</h2>
-                            {/* <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> */}
-                            </div>
-                            <div className="details">
-                              <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> <br/>
-                              <p>EKT CERAMICS® is a registered trade mark for The Klinkers Trading plc. The company has 18+ years of good reputation for delivering quality construction material solutions known with our mother company EKT Trade &amp; Investment Plc.<br /><br/>
-                              Our mother company EKT Trade and investment is one of the pioneers in import &amp; export business in Ethiopia. Since its establishment it has got solid experience in importing &amp; distributing high-quality building finishing materials, and construction Chemicals.</p>
 
-                              <div className="btns">
-                                  <a href="about.html" className="theme-btn">Read More</a>
-                                  <a href="contact.html" className="theme-btn-s3">Contact us</a>
-                              </div>
-                            </div>
-                        </div>
-                        <div className="col col-md-6">
-                            <div className="right-col">
-                              <div className="col col-md-6">
-                                <div className="right-col">
-                                    <div className="img-holder">
-                                        <img src="assets/images/about.png" alt="" />
-                                    </div>
-                                    <div className="video-holder">
-                                        <a href="products.html" className="hero-video-btn video-btn"  data-type="iframe" tabIndex="0"><i className="fi flaticon-play-button"></i>Read More About our Products</a> 
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-              </section>
+              <AboutUsComponent />
 
               {/* <div className="album py-5 bg-light">
                 <div className="container">
@@ -244,7 +212,7 @@ function IndexComponent () {
                         <div className="member-info">
                           <h4>PPR PIPE &amp; FITTING</h4>
                           <span><p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for aQuapa Brand.</p></span>
-                          <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                          <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                         </div>
                       </div>
                     </div>

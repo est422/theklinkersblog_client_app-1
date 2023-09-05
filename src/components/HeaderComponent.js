@@ -8,12 +8,13 @@ function HeaderComponent () {
         <section id="topbar" className="d-flex align-items-center">
             <div className="container d-flex justify-content-center justify-content-md-between">
                 <div className="contact-info d-flex align-items-center">
-                    <i className="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
-                    <i className="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+                    <i className="bi bi-envelope d-flex align-items-center"><a href="#">info@theklinkers.et</a></i>
+                    <i className="bi bi-phone d-flex align-items-center ms-4"><span>+251 116 61 0160</span></i>
                 </div>
-
-                <div className="cta d-none d-md-flex align-items-center">
-                    <a href="#about" className="">Get Started</a>
+                <div className="social-links d-none d-md-flex align-items-center">
+                  <a href="#" className="youtube"><i className="bx bxl-youtube"></i></a>
+                  <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
+                  <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
                 </div>
             </div>
         </section>
@@ -26,31 +27,32 @@ function HeaderComponent () {
 
                 <nav id="navbar" className="navbar">
                     <ul>
-                    <li><a className="nav-link active" href="#hero">Home</a></li>
-                    <li><a className="nav-link" href="#about">About</a></li>
-                    <li><Link to={"/products"} className="nav-link ">Products</Link></li>
-                    <li><a className="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li><a className="nav-link" href="#team">Team</a></li>
-                    <li><a className="nav-link" href="#pricing">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li> 
-                    <li className="dropdown"><a href="#"><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
+                    <li><Link to={"/"} className="nav-link">Home</Link></li>
+                    <li><Link to={"/about"} className="nav-link">About Us</Link></li>
+                    {/* <li><Link to={"/products"} className="nav-link ">Products</Link></li> */}
+                    <li className="dropdown"><Link to={"/products"}><span>Products</span> <i className="bi bi-chevron-down"></i></Link>
                         <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li className="dropdown"><a href="#"><span>Deep Drop Down</span> <i className="bi bi-chevron-right"></i></a>
+                        <li><Link to={"/ppr"}>PPR PIPE &amp; FITTING</Link></li>
+                        <li><Link to={"/sanitary"}>SANITARY WARE</Link></li>
+                        <li className="dropdown"><Link to={"/construction"}><span>CONSTRUCTION CHEMICAL</span> <i className="bi bi-chevron-right"></i></Link>
                             <ul>
-                            <li><a href="#">Deep Drop Down 1</a></li>
-                            <li><a href="#">Deep Drop Down 2</a></li>
-                            <li><a href="#">Deep Drop Down 3</a></li>
-                            <li><a href="#">Deep Drop Down 4</a></li>
-                            <li><a href="#">Deep Drop Down 5</a></li>
+                            <li><Link to={"/waterproofing"}>Water Proofing</Link></li>
+                            <li><Link to={"/refurbishment"}>Refurbishment</Link></li>
+                            <li><Link to={"/roofing"}>Roofing</Link></li>
+                            <li><Link to={"/sealing"}>Sealing &amp; Bonding</Link></li>
+                            <li><Link to={"/concrete"}>Concrete</Link></li>
+                            <li><Link to={"/flooring"}>Flooring</Link></li>
                             </ul>
                         </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
+                        <li><Link to={"/paint"}>PAINT</Link></li>
+                        <li><Link to={"/doorlocks"}>DOOR LOCKS</Link></li>
+                        <li><Link to={"/ceramics"}>CERAMICS TILES</Link></li>
+                        <li><Link to={"/spc"}>SPC ,UV Board &amp; PVC CEILING</Link></li>
                         </ul>
                     </li>
-                    <li><a className="nav-link" href="#contact">Contact</a></li>
+                    <li><Link to={"/projects"} className="nav-link">Projects</Link></li>
+                    <li><Link to={"/blogs"}>Blog</Link></li> 
+                    <li><Link to={"/contact"} className="nav-link">Contact Us</Link></li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"></i>
                 </nav>
