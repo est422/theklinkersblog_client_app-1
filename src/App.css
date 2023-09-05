@@ -664,7 +664,7 @@ h6 {
 --------------------------------------------------------------*/
 .clients {
   padding: 10px;
-  background-color: #fff9f7;
+  /* background-color: #fff9f7; */
 }
 
 .clients .client-logo {

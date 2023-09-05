@@ -1,10 +1,17 @@
 import './App.css';
 import HomeComponent from './components/HomeComponent';
 import IndexComponent from './components/IndexComponent';
+import NavComponent from './components/NavComponent';
+import FooterComponent from "./components/FooterComponent";
 
 function App() {
   return (
-    <IndexComponent />
+    <>
+    <NavComponent />
+    {/* <IndexComponent /> */}
+    <FooterComponent />
+    </>
+    
     
   );
 }
