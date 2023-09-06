@@ -7,7 +7,7 @@ function ContactUsComponent () {
 
                 <div className="section-title">
                 <h2 data-aos="fade-up">Contact</h2>
-                <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                {/* <p data-aos="fade-up">Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> */}
                 </div>
 
                 <div className="row justify-content-center">
@@ -16,7 +16,7 @@ function ContactUsComponent () {
                     <div className="info-box">
                     <i className="bx bx-map"></i>
                     <h3>Our Address</h3>
-                    <p>A108 Adam Street, New York, NY 535022</p>
+                    <p>Infront of Sahelete Meheret Square, Drar Mall 9th Floor, Addis Ababa, Ethiopia </p>
                     </div>
                 </div>
 
@@ -24,14 +24,14 @@ function ContactUsComponent () {
                     <div className="info-box">
                     <i className="bx bx-envelope"></i>
                     <h3>Email Us</h3>
-                    <p>info@example.com<br />contact@example.com</p>
+                    <p>sales@theklinkers.et</p>
                     </div>
                 </div>
                 <div className="col-xl-3 col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="200">
                     <div className="info-box">
                     <i className="bx bx-phone-call"></i>
                     <h3>Call Us</h3>
-                    <p>+1 5589 55488 55<br />+1 6678 254445 41</p>
+                    <p>+251 116 61 0160</p>
                     </div>
                 </div>
                 </div>

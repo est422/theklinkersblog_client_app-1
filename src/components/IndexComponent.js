@@ -54,28 +54,28 @@ function IndexComponent () {
         </button>
         </div>
       <main id="main">
-          {/* <section className="features-section">
+          <section className="features-section">
                   <div className="container">
                       <div className="row">
                           <div className="col col-xs-12">
                               <div className="feature-grids clearfix">
                                   <div className="grid">
                                       <div className="icon">
-                                          <i className="bi bi-star"></i>
+                                          {/* <i className="bi bi-star"></i> */}
                                       </div>
                                       <span className="count">01.</span>
                                       <h4>CERTIFIED PRODUCTS</h4>
                                   </div>
                                   <div className="grid">
                                       <div className="icon">
-                                          <i className="fi flaticon-motivation"></i>
+                                          {/* <i className="fi flaticon-motivation"></i> */}
                                       </div>
                                       <span className="count">02.</span>
                                       <h4>BETTER REPUTATION</h4>
                                   </div>
                                   <div className="grid">
                                       <div className="icon">
-                                          <i className="fi flaticon-phone-call"></i>
+                                          {/* <i className="fi flaticon-phone-call"></i> */}
                                       </div>
                                       <span className="count">03.</span>
                                       <h4>TECHNICAL SUPPORT</h4>
@@ -84,9 +84,46 @@ function IndexComponent () {
                           </div>
                       </div>
                   </div> 
-              </section> */}
+              </section>
 
-              <AboutUsComponent />
+              {/* <AboutUsComponent /> */}
+
+              <section className="about-us-section section-padding">
+            <div className="container">
+                <div className="row">
+                    <div className="col col-md-6">
+                        <div className="section-title">
+                        <h2>About us</h2>
+                        {/* <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> */}
+                        </div>
+                        <div className="details">
+                          <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> <br/>
+                          <p>EKT CERAMICS® is a registered trade mark for The Klinkers Trading plc. The company has 18+ years of good reputation for delivering quality construction material solutions known with our mother company EKT Trade &amp; Investment Plc.<br /><br/>
+                          Our mother company EKT Trade and investment is one of the pioneers in import &amp; export business in Ethiopia. Since its establishment it has got solid experience in importing &amp; distributing high-quality building finishing materials, and construction Chemicals.</p>
+
+                          <div className="btns">
+                            <a href="about.html" className="theme-btn">Read More</a>
+                            <a href="contact.html" className="theme-btn-s3">Contact us</a>
+                          </div>
+                        </div>
+                    </div>
+                    <div className="col col-md-6 d-flex">
+                        <div className="right-col">
+                          <div className="col col-md-12">
+                            <div className="right-col">
+                                <div className="img-holder">
+                                    <img src="assets/images/about.png" alt="" />
+                                </div>
+                                <div className="video-holder">
+                                    <a href="products.html" className="hero-video-btn video-btn"  data-type="iframe" tabIndex="0"><i className="fi flaticon-play-button"></i>Read More About our Products</a> 
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
 
               {/* <div className="album py-5 bg-light">
                 <div className="container">
