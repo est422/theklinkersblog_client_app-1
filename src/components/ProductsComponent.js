@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ProductsComponent () {
 
     return(
@@ -27,7 +29,7 @@ function ProductsComponent () {
                     <div className="member-info">
                       <h4>PPR PIPE &amp; FITTING</h4>
                       <span><p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for aQuapa Brand.</p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -46,7 +48,7 @@ function ProductsComponent () {
                     <div className="member-info">
                       <h4>SANITARY WARE PRODUCTS</h4>
                       <span><p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for PC Brand.</p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -65,7 +67,7 @@ function ProductsComponent () {
                     <div className="member-info">
                       <h4>CONSTRUCTION CHEMICALS</h4>
                       <span><p>EKT CERAMICS® is the Official Distributor for Sika a Swiss concern specialty Chemicals Company.</p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -84,7 +86,7 @@ function ProductsComponent () {
                     <div className="member-info">
                       <h4>PAINT PRODUCTS</h4>
                       <span><p>EKT CERAMICS® is the Official Distributor for JOTUN one of the world’s leading paints and coatings manufacturers,</p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -103,7 +105,7 @@ function ProductsComponent () {
                     <div className="member-info">                    
                       <h4>DOOR LOCK PRODUCTS</h4>
                       <span><p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for TESA ASSA ABLOY.</p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -122,7 +124,7 @@ function ProductsComponent () {
                     <div className="member-info">                    
                       <h4>CERAMICS TILES</h4>
                       <span><p>When it comes to finding the perfect tiles to go with your new bathroom, kitchen, living area or outdoor space. </p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -141,7 +143,7 @@ function ProductsComponent () {
                     <div className="member-info">                    
                       <h4>SPC ,UV Board &amp; PVC CEILING</h4>
                       <span><p> of Hanbon Brand SPC (Stone Polymer Composite) flooring, uv board (Marble sheet) wall decorative sheets , PVC ceiling and skirting</p></span>
-                      <span><a href="product-details-decorative-wall-panel.html" type="button" className="btn-view-more">Read More...</a></span>
+                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
