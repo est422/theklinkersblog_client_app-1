@@ -51,7 +51,11 @@ function HeaderComponent () {
                         </ul>
                     </li>
                     <li><Link to={"/projects"} className="nav-link">Projects</Link></li>
-                    <li><Link to={"/blogs"}>Blog</Link></li> 
+                    <li className="dropdown"><Link to={"/blogs"}>Blog</Link>
+                      <ul>
+                        <li><Link to={"/addpost"}>Add New Post</Link></li>
+                      </ul>
+                    </li>
                     <li><Link to={"/contact"} className="nav-link">Contact Us</Link></li>
                     </ul>
                     <i className="bi bi-list mobile-nav-toggle"></i>

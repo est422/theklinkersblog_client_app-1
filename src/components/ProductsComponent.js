@@ -67,7 +67,7 @@ function ProductsComponent () {
                     <div className="member-info">
                       <h4>CONSTRUCTION CHEMICALS</h4>
                       <span><p>EKT CERAMICS® is the Official Distributor for Sika a Swiss concern specialty Chemicals Company.</p></span>
-                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                      <span><Link to={"/construction"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>

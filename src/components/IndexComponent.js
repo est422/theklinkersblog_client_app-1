@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AboutUsComponent from "./AboutUsComponent";
+import ProductsComponent from "./ProductsComponent";
 
 function IndexComponent () {
 
@@ -89,41 +90,40 @@ function IndexComponent () {
               {/* <AboutUsComponent /> */}
 
               <section className="about-us-section section-padding">
-            <div className="container">
-                <div className="row">
-                    <div className="col col-md-6">
-                        <div className="section-title">
-                        <h2>About us</h2>
-                        {/* <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> */}
-                        </div>
-                        <div className="details">
-                          <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> <br/>
-                          <p>EKT CERAMICS® is a registered trade mark for The Klinkers Trading plc. The company has 18+ years of good reputation for delivering quality construction material solutions known with our mother company EKT Trade &amp; Investment Plc.<br /><br/>
-                          Our mother company EKT Trade and investment is one of the pioneers in import &amp; export business in Ethiopia. Since its establishment it has got solid experience in importing &amp; distributing high-quality building finishing materials, and construction Chemicals.</p>
+                <div className="container">
+                    <div className="section-title">
+                      <h2>About us</h2>
+                    </div>
+                    <div className="row">
+                        <div className="col col-md-6">
+                            <div className="details pt-5">
+                              <h2>WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h2> <br/>
+                              <p>EKT CERAMICS® is a registered trade mark for The Klinkers Trading plc. The company has 18+ years of good reputation for delivering quality construction material solutions known with our mother company EKT Trade &amp; Investment Plc.<br /><br/>
+                              Our mother company EKT Trade and investment is one of the pioneers in import &amp; export business in Ethiopia. Since its establishment it has got solid experience in importing &amp; distributing high-quality building finishing materials, and construction Chemicals.</p>
 
-                          <div className="btns">
-                            <a href="about.html" className="theme-btn">Read More</a>
-                            <a href="contact.html" className="theme-btn-s3">Contact us</a>
-                          </div>
-                        </div>
-                    </div>
-                    <div className="col col-md-6 d-flex">
-                        <div className="right-col">
-                          <div className="col col-md-12">
-                            <div className="right-col">
-                                <div className="img-holder">
-                                    <img src="assets/images/about.png" alt="" />
-                                </div>
-                                <div className="video-holder">
-                                    <a href="products.html" className="hero-video-btn video-btn"  data-type="iframe" tabIndex="0"><i className="fi flaticon-play-button"></i>Read More About our Products</a> 
-                                </div>
+                              <div className="btns pt-5">
+                                <a href="about.html" className="theme-btn">Read More</a>
+                                <a href="contact.html" className="theme-btn-s3">Contact us</a>
+                              </div>
                             </div>
-                          </div>
+                        </div>
+                        <div className="col col-md-6 d-flex">
+                            <div className="right-col">
+                              <div className="col col-md-12">
+                                <div className="right-col">
+                                    <div className="img-holder">
+                                        <img src="assets/images/about.png" alt="" />
+                                    </div>
+                                    <div className="video-holder">
+                                        <a href="products.html" className="hero-video-btn video-btn"  data-type="iframe" tabIndex="0"><i className="fi flaticon-play-button"></i>Read More About our Products</a> 
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div> 
-        </section>
+                </div> 
+            </section>
 
               {/* <div className="album py-5 bg-light">
                 <div className="container">
@@ -225,12 +225,13 @@ function IndexComponent () {
                 </div>
               </div> */}
 
-              <section id="team" className="team">
+              <ProductsComponent />
+
+              {/* <section id="team" className="team">
                 <div className="container py-5">
 
                   <div className="section-title">
                     <h2 data-aos="fade-up">Our Industry Soutions</h2>
-                    {/* <p data-aos="fade-up">Our Industry Soutions.</p> */}
                   </div>
 
                   <div className="row">
@@ -239,12 +240,7 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-1.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">
                           <h4>PPR PIPE &amp; FITTING</h4>
@@ -258,12 +254,7 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-2.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">
                           <h4>SANITARY WARE PRODUCTS</h4>
@@ -277,17 +268,12 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-3.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">
                           <h4>CONSTRUCTION CHEMICALS</h4>
                           <span><p>EKT CERAMICS® is the Official Distributor for Sika a Swiss concern specialty Chemicals Company.</p></span>
-                          <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                          <span><Link to={"/construction"} type="button" className="btn-view-more">Read More...</Link></span>
                         </div>
                       </div>
                     </div>
@@ -296,12 +282,7 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-4.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">
                           <h4>PAINT PRODUCTS</h4>
@@ -315,12 +296,7 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-5.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">                    
                           <h4>DOOR LOCK PRODUCTS</h4>
@@ -334,12 +310,7 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-6.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">                    
                           <h4>CERAMICS TILES</h4>
@@ -353,12 +324,7 @@ function IndexComponent () {
                       <div className="member">
                         <div className="member-img">
                           <img src="assets/images/services/img-7.jpg" className="img-fluid" alt="" />
-                          {/* <div className="social">
-                            <a href=""><i className="bi bi-twitter"></i></a>
-                            <a href=""><i className="bi bi-facebook"></i></a>
-                            <a href=""><i className="bi bi-instagram"></i></a>
-                            <a href=""><i className="bi bi-linkedin"></i></a>
-                          </div> */}
+                          
                         </div>
                         <div className="member-info">                    
                           <h4>SPC ,UV Board &amp; PVC CEILING</h4>
@@ -371,16 +337,16 @@ function IndexComponent () {
                   </div>
 
                 </div>
-              </section>
+              </section> */}
+
+              <div className="section-title">
+                <span>Our Features</span>
+                <h2 className="pt-2">Why Choose Us!</h2>
+                <span><p>Throughout our experience in the business sector, it has been the priority of our company to engage in the supply of quality and modern materials to the construction industry.</p></span>
+              </div>
 
               <section id="services" className="services py-5">
                 <div className="container">
-                  <div className="section-title">
-                    <span>Our Features</span>
-                    <h2 className="pt-2">Why Choose Us!</h2>
-                    <span><p>Throughout our experience in the business sector, it has been the priority of our company to engage in the supply of quality and modern materials to the construction industry.</p></span>
-                  </div>
-
                   <div className="row">
                     <div className="col-lg-6">
                       <div className="icon-box">
@@ -419,7 +385,7 @@ function IndexComponent () {
                 </div>
               </section>
 
-              <section id="clients" className="clients">
+              <section id="clients" className="clients pt-5">
                 <div className="section-title">
                   <h2 data-aos="fade-up">Partners</h2>
                   {/* <p data-aos="fade-up">Explore What We've Done</p> */}
@@ -492,7 +458,7 @@ function IndexComponent () {
                 </div>
               </section> */}
 
-              <section id="team" className="team  py-5">
+              <section id="team" className="team py-5">
                 <div className="section-title">
                   <h2 data-aos="fade-up">Featured Projects</h2>
                     <p data-aos="fade-up">Explore What We've Done.</p>

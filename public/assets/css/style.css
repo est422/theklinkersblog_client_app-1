@@ -31,6 +31,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+  color: #012970;
 }
 
 /*--------------------------------------------------------------
@@ -602,10 +603,108 @@ h6 {
   }
 }
 
+/* Card */
+.card {
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-header,
+.card-footer {
+  border-color: #ebeef4;
+  background-color: #fff;
+  color: #798eb3;
+  padding: 15px;
+}
+
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}
+
+.card-title span {
+  color: #899bbd;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card-body {
+  padding: 0 20px 20px 20px;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*-----------------------
+image css
+-------------------------*/
+.bd-placeholder-img {
+  width: 100%;
+  height: 60vh;
+  object-fit: fill;
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    /* object-fit: fill; */
+  }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
+  padding: 0 0 80px 0;
+}
+
+.section-bg {
+  background-color: white;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e96b56;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+/* section {
   padding: 60px 0;
   overflow: hidden;
 }
@@ -625,12 +724,12 @@ section {
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: "Poppins", sans-serif;
-  color: #635551;
+  color: #012970;
 }
 
 .section-title p {
   margin-bottom: 0;
-}
+} */
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -673,6 +772,7 @@ section {
   padding: 0 0 30px 0;
   position: relative;
   z-index: 3;
+  background-color: #012970;
 }
 
 .why-us .content {
@@ -739,6 +839,10 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+/* .about-us-section {
+  background-color: #fff9f7;
+} */
+
 .about .icon-boxes h4 {
   font-size: 18px;
   color: #7f6d68;
@@ -1051,6 +1155,10 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+/* .services {
+  background-color: #fff9f7;
+} */
+
 .services .icon-box {
   padding: 50px 20px;
   margin-top: 35px;
@@ -1454,6 +1562,10 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+.team {
+  background-color: #fff9f7;
+}
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1508,7 +1620,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
-  color: #473d3a;
+  color: #012970;
 }
 
 .team .member .member-info span {
