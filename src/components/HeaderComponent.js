@@ -1,6 +1,9 @@
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 
 function HeaderComponent () {
+
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
 
     return(
         
@@ -58,7 +61,7 @@ function HeaderComponent () {
                     </li>
                     <li><Link to={"/contact"} className="nav-link">Contact Us</Link></li>
                     </ul>
-                    <i className="bi bi-list mobile-nav-toggle"></i>
+                    <button className="bi bi-list mobile-nav-toggle"></button>
                 </nav>
 
             </div>

@@ -9,50 +9,50 @@ function IndexComponent () {
       <div className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="img" src="assets/images/slider/slide-1.jpg"  />
+            <img className="img-fluid" src="assets/images/slider/slide-1.jpg"  />
 
             <div className="container">
               <div className="carousel-caption text-start">
                 <h1>The Best Paint For Your Building.</h1>
                 <p>We Provide JUTON Paint Products.</p>
-                <a href="#" className="theme-btn">Our Products</a>
-                <a href="#" className="theme-btn-s2">More about us</a>
+                <Link to={"/products"} className="theme-btn">Our Products</Link>
+                <Link to={"/about"} className="theme-btn-s2">More about us</Link>
               </div>
             </div>
           </div>
           <div className="carousel-item">
-            <img className="img" src="assets/images/slider/slide-2.jpg"  />
+            <img className="img-fluid" src="assets/images/slider/slide-2.jpg"  />
 
             <div className="container">
               <div className="carousel-caption text-start">
                 <h1>Official Distributor of Sika Products.</h1>
                 <p>EKT CERAMICS® is the Official Distributor for Sika a Swiss concern specialty Chemicals Company.</p>
-                <a href="#" className="theme-btn">Our Products</a>
-                <a href="#" className="theme-btn-s2">More about us</a>
+                <Link to={"/products"} className="theme-btn">Our Products</Link>
+                <Link to={"/about"} className="theme-btn-s2">More about us</Link>
               </div>
             </div>
           </div>
           <div className="carousel-item">
-            <img className="img" src="assets/images/slider/slide-3.jpg"  />
+            <img className="img-fluid" src="assets/images/slider/slide-3.jpg"  />
 
             <div className="container">
               <div className="carousel-caption text-start">
                 <h1>High resistance to pressure.</h1>
                 <p>Exclusive Country Representative in Ethiopia for aQuapa Brand produced.</p>
-                <a href="#" className="theme-btn">Our Products</a>
-                <a href="#" className="theme-btn-s2">More about us</a>
+                <Link to={"/products"} className="theme-btn">Our Products</Link>
+                <Link to={"/about"} className="theme-btn-s2">More about us</Link>
               </div>
             </div>
           </div>
         </div>
-        <button className="carousel-control-prev" type="button" data-bs-slide="prev">
+        {/* <button className="carousel-control-prev" type="button" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button className="carousel-control-next" type="button" data-bs-slide="next">
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
-        </button>
+        </button> */}
         </div>
       <main id="main">
           <section className="features-section">

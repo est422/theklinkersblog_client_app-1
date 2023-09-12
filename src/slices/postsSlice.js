@@ -23,9 +23,10 @@ export const createPost = createAsyncThunk('posts/create', async (post) => {
   .then((response) => response.data)
 })
 
-export const updatePost = createAsyncThunk('posts/update', async (post) => {
+export const updatePost = createAsyncThunk('posts/update', async ({id, updatedPost}) => {
 
-  return await axios.put('http://localhost:9000/api/posts/update', post)
+  console.log(`slice post ${updatedPost.postTitle, updatePost.postDescription}`)
+  return await axios.put(`http://localhost:9000/api/posts/update/${id}`, updatedPost)
   .then((response) => response.data)
 
 })

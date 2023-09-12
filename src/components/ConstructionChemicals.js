@@ -3,10 +3,10 @@ function ConstructionChemicals () {
     return (
         <>
         <section id="team" className="team">
-          <div className="col-lg-12 p-5" data-aos="fade-up">
+          <div className="col-lg-12 p-1" data-aos="fade-up">
             <div className="member">
                 <div className="member-img">
-                <img src="assets/images/constwall.jpg" className="bd-placeholder-img" alt="" />
+                <img src="assets/images/constwall.jpg" className="bd-placeholder-img img-fluid" alt="" />
                 </div>
                 <div className="member-info">
 
@@ -134,7 +134,7 @@ function ConstructionChemicals () {
               <div className="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <div className="member">
                   <div className="member-img">
-                    <img src="assets/images/sikagard-70-w.jpg" className="bd-placeholder-img" alt="" />
+                    <img src="assets/images/sikagard-703-w.jpg" className="bd-placeholder-img" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Sikagard 70 3 W</h4>
