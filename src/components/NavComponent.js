@@ -12,6 +12,7 @@ import PprComponent from "./PprComponent";
 import NewPostComponent from "./NewPostComponent";
 import UpdatePostComponent from "./UpdatePostComponent";
 import DeletePostComponent from "./DeletePostComponent";
+import LoginComponent from "./LoginComponent";
 
 function NavComponent () {
 
@@ -29,6 +30,7 @@ function NavComponent () {
             <Route exact path="/blogs/delete/:id" element={<DeletePostComponent />} />
             <Route exact path="/addpost" element={<NewPostComponent />} />
             <Route exact path="/contact" element={<ContactUsComponent />} />
+            <Route exact path="/login" element={<LoginComponent />} />
         </Routes>
         </>
     )

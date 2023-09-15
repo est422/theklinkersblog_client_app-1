@@ -1,4 +1,19 @@
+import React, { useEffect, useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { Link, useNavigate } from "react-router-dom"
+import { authSlice, userLogout } from '../slices/authSlice'
+
+
 function FooterComponent () {
+
+    const dispatch = useDispatch()
+    const isLoggedIn = useSelector((state) => state.authSlice.loggedIn)
+
+    const handleLogout = (event) => {
+        event.preventDefault()
+        dispatch(userLogout())
+
+    }
 
     return(
         <>
@@ -26,10 +41,10 @@ function FooterComponent () {
                         <div className="col-lg-4 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">About Us</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Products</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
-                            <li><i className="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
+                            <li><i className="bx bx-chevron-right"></i> <Link to={"/about"}>About Us</Link></li>
+                            <li><i className="bx bx-chevron-right"></i> <Link to={"/products"}>Products</Link></li>
+                            <li><i className="bx bx-chevron-right"></i> <Link to={"/contact"}>Contact Us</Link></li>
+                            { !isLoggedIn ? <li><i className="bx bx-chevron-right"></i> <Link to={"/login"}>Login</Link></li> : <li><i className="bx bx-chevron-right"></i> <a onClick={handleLogout}>Logout</a></li>}
                             </ul>
                         </div>
 

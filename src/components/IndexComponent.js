@@ -89,11 +89,14 @@ function IndexComponent () {
 
               {/* <AboutUsComponent /> */}
 
+              <div className="section-title">
+                <h2>About us</h2>
+              </div>
               <section className="about-us-section section-padding">
                 <div className="container">
-                    <div className="section-title">
+                    {/* <div className="section-title">
                       <h2>About us</h2>
-                    </div>
+                    </div> */}
                     <div className="row">
                         <div className="col col-md-6">
                             <div className="details pt-5">
