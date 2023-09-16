@@ -25,18 +25,20 @@ export const userLogin = createAsyncThunk('users/login', async (user) => {
   .then((response) => response.data)
 })
 
-export const userLogout = createAsyncThunk('users/logout', async () => {
+// export const userLogout = createAsyncThunk('users/logout', async () => {
 
-
-//   return await axios.delete(`http://localhost:9000/api/posts/delete/${id}`)
-//   .then((response) => response.data)
-
-})
+// })
 
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
-//   reducers: {},
+  reducers: {
+    userLogout: (state) => {
+      state.loggedIn = false
+      localStorage.removeItem('token')
+
+    }
+  },
   extraReducers: (builder) => {
       builder.addCase(getUser.pending, (state) => {
           state.isLoading = true
@@ -67,22 +69,22 @@ export const authSlice = createSlice({
         state.loggedIn = false
         state.error = action.payload
       })
-      builder.addCase(userLogout.pending, (state) => {
-        state.isLoading = true
-      })
-      builder.addCase(userLogout.fulfilled, (state, action) => {
-        state.isLoading = false
-        state.loggedIn = false
-        state.token = ""
-        localStorage.removeItem("token")
-        state.error = ''
-      })
-      builder.addCase(userLogout.rejected, (state, action) => {
-        state.isLoading = false
-        state.loggedIn = false
-        state.token = ""
-        state.error = action.payload
-      })
+      // builder.addCase(userLogout.pending, (state) => {
+      //   state.isLoading = true
+      // })
+      // builder.addCase(userLogout.fulfilled, (state, action) => {
+      //   state.isLoading = false
+      //   state.loggedIn = false
+      //   state.token = ""
+      //   localStorage.removeItem("token")
+      //   state.error = ''
+      // })
+      // builder.addCase(userLogout.rejected, (state, action) => {
+      //   state.isLoading = false
+      //   state.loggedIn = false
+      //   state.token = ""
+      //   state.error = action.payload
+      // })
       
   }
 })
@@ -90,6 +92,6 @@ export const authSlice = createSlice({
 // Action creators are generated for each case reducer function
 // export const {  } = counterSlice.actions
 // Selectors
-// export const allPatients = state => state.patients.patients;
+export const { userLogout } = authSlice.actions
 
 export default authSlice.reducer

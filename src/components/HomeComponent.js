@@ -11,6 +11,7 @@ function HomeComponent () {
         <>
         <div className="page-wrapper">
             <IndexComponent />
+            <FooterComponent />
         </div>
         </>
         )

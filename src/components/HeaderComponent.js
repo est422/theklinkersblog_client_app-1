@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import { authSlice } from '../slices/authSlice'
 
 function HeaderComponent () {
 
-  const [isNavExpanded, setIsNavExpanded] = useState(false)
+    const isLoggedIn = useSelector((state) => state.authSlice.loggedIn)
+    const [isNavExpanded, setIsNavExpanded] = useState(false)
+
+
+    useEffect(() => {
+          
+    }, [isLoggedIn])
 
     return(
         
@@ -56,7 +64,7 @@ function HeaderComponent () {
                     <li><Link to={"/projects"} className="nav-link">Projects</Link></li>
                     <li className="dropdown"><Link to={"/blogs"}>Blog</Link>
                       <ul>
-                        <li><Link to={"/addpost"}>Add New Post</Link></li>
+                        {isLoggedIn ? <li><Link to={"/addpost"}>Add New Post</Link></li> : ""}
                       </ul>
                     </li>
                     <li><Link to={"/contact"} className="nav-link">Contact Us</Link></li>

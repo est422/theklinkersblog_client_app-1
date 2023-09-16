@@ -9,11 +9,18 @@ function FooterComponent () {
     const dispatch = useDispatch()
     const isLoggedIn = useSelector((state) => state.authSlice.loggedIn)
 
+    const navigate = useNavigate()
+
     const handleLogout = (event) => {
         event.preventDefault()
         dispatch(userLogout())
+        navigate(-1)
 
     }
+
+    useEffect(() => {
+        
+    }, [isLoggedIn])
 
     return(
         <>
@@ -44,7 +51,7 @@ function FooterComponent () {
                             <li><i className="bx bx-chevron-right"></i> <Link to={"/about"}>About Us</Link></li>
                             <li><i className="bx bx-chevron-right"></i> <Link to={"/products"}>Products</Link></li>
                             <li><i className="bx bx-chevron-right"></i> <Link to={"/contact"}>Contact Us</Link></li>
-                            { !isLoggedIn ? <li><i className="bx bx-chevron-right"></i> <Link to={"/login"}>Login</Link></li> : <li><i className="bx bx-chevron-right"></i> <a onClick={handleLogout}>Logout</a></li>}
+                            { !isLoggedIn ? <li><i className="bx bx-chevron-right"></i> <Link to={"/login"}>Login</Link></li> : <li><i className="bx bx-chevron-right"></i> <Link onClick={handleLogout}>Logout</Link></li>}
                             </ul>
                         </div>
 

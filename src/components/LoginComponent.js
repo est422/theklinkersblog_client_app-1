@@ -29,7 +29,7 @@ function LoginComponent () {
             event.stopPropagation()
         } else if (form.checkValidity() === true) {
             dispatch(userLogin(user))
-            // navigate(-1)
+            navigate(-1)
             // console.log(localStorage.getItem('token'))
             // setValidated(true)
         }

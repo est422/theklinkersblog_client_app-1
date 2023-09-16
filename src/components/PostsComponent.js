@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent";
+
 function PostsComponent () {
 
     return(
@@ -219,6 +221,7 @@ function PostsComponent () {
 
             </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

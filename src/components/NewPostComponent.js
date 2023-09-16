@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate  } from 'react-router-dom'
 import { createPost } from '../slices/postsSlice'
+import FooterComponent from './FooterComponent'
 
 function NewPostComponent () {
 
@@ -69,7 +70,8 @@ function NewPostComponent () {
                     </div>
                 </div>
             </div>    
-        </section>        
+        </section>
+        <FooterComponent />     
         </>
     )
 }

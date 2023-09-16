@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent";
+
 function ConstructionChemicals () {
 
     return (
@@ -267,6 +269,7 @@ function ConstructionChemicals () {
 
           </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

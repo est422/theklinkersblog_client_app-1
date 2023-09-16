@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent";
+
 function AboutUsComponent () {
 
     return(
@@ -213,6 +215,7 @@ function AboutUsComponent () {
 
                 </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

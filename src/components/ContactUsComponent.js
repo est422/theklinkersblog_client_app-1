@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent";
+
 function ContactUsComponent () {
 
     return(
@@ -66,6 +68,7 @@ function ContactUsComponent () {
 
             </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent";
+
 function PprComponent () {
 
     return(
@@ -70,6 +72,7 @@ function PprComponent () {
             </div>
             </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

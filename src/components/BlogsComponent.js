@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, useNavigate  } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import postsSlice, { getAllPosts } from '../slices/postsSlice'
+import FooterComponent from './FooterComponent'
 
 function BlogsComponent () {
 
@@ -99,6 +100,7 @@ function BlogsComponent () {
                 {/* </div> */}
             </div>
         </section>
+        <FooterComponent />
         </>
     )
 }
