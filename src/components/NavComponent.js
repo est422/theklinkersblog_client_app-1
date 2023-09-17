@@ -27,10 +27,10 @@ function NavComponent () {
             <Route exact path="/ppr" element={<PprComponent />} />
             <Route exact path="/construction" element={<ConstructionChemicals />} />
             <Route exact path="/blogs" element={<BlogsComponent />} />
-            <Route exact path="/blogs/edit/:id" element={<UpdatePostComponent />} />
-            <Route exact path="/blogs/delete/:id" element={<DeletePostComponent />} />
             <Route element={<ProtectedRoute />}>
                 <Route exact path="/addpost" element={<NewPostComponent />} />
+                <Route exact path="/blogs/edit/:id" element={<UpdatePostComponent />} />
+                <Route exact path="/blogs/delete/:id" element={<DeletePostComponent />} />
             </Route>
             <Route exact path="/contact" element={<ContactUsComponent />} />
             <Route exact path="/login" element={<LoginComponent />} />

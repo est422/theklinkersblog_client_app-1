@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, useNavigate  } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import postsSlice, { getAllPosts } from '../slices/postsSlice'
+import { authSlice } from '../slices/authSlice'
 import FooterComponent from './FooterComponent'
 
 function BlogsComponent () {
 
     const dispatch = useDispatch()
+    const isLoggedIn = useSelector((state) => state.authSlice.loggedIn)
     const posts = useSelector((state) => state.postsSlice.posts)
     const error = useSelector((state) => state.postsSlice.error)
     const isLoading = useSelector((state) => state.postsSlice.isLoading)
@@ -23,21 +25,36 @@ function BlogsComponent () {
     useEffect(() => {
         dispatch(getAllPosts())
         // console.log(posts)
-    }, [])
+    }, [isLoggedIn])
 
 
     return(
         <>
-        <section className="inner-page pt-3">
-            <div id="blog" className="blog">
+        <main id='main'>
+            <section id="blog" className="blog">
                 <div className="container" data-aos="fade-up">
-                {isLoading && <div><p>Loading...</p></div>}
-                {!isLoading && error ? <div><p>Something went wrong: {error}</p></div> : null}
-                {posts.map((post, i) => (<div key={i} className="row">
+                {isLoading && 
+                <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status"></div>
+                </div> }
+                {!isLoading && error ? 
+                <div className="col-lg-12 justify-content-center entries">
 
-                    <div className="col-lg-12 entries">
+                    <article className="entry">
 
-                        <article className="entry">
+                    <h2 className="entry-content text-center">
+                        <a href="blog-single.html">{error}</a>
+                    </h2>
+
+                    </article>
+
+                </div>
+                 : null}
+                <div className="row">          
+
+                    <div className="col-lg-8 entries">
+
+                    {posts.map((post, i) => (<article key={i} className="entry">
 
                         <div className="entry-img">
                             <img src="assets/img/blog/blog-1.jpg" alt="" className="img-fluid" />
@@ -51,8 +68,10 @@ function BlogsComponent () {
                             <ul>
                             {/* <li className="d-flex align-items-center"><i className="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li> */}
                             <li className="d-flex align-items-center"><i className="bi bi-clock"></i><time dateTime="2020-01-01">Jan 1, 2020</time></li>
-                            <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li>
-                            <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li>
+                            {/* <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li>
+                            <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> */}
+                            {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
+                            {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
                             </ul>
                         </div>
 
@@ -65,12 +84,9 @@ function BlogsComponent () {
                             </div>
                         </div>
 
-                        </article>
-
+                        </article>))}
                     </div>
-                    </div>))}
-
-                    {/* <div className="col-lg-4">
+                    <div className="col-lg-4">
 
                         <div className="sidebar">
 
@@ -93,13 +109,12 @@ function BlogsComponent () {
 
                         </div>
 
-                    </div> */}
+                        </div>
+                        </div>
 
-                    </div>
-
-                {/* </div> */}
-            </div>
-        </section>
+                </div>
+            </section>
+        </main>
         <FooterComponent />
         </>
     )

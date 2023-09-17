@@ -75,7 +75,7 @@ function UpdatePostComponent () {
                             </div>
                             <div className="text-center">
                             <button type="submit" className="btn btn-primary m-1">Submit</button>
-                            <button type="reset" className="btn btn-secondary" onClick={handleClose}>Reset</button>
+                            <button type="reset" className="btn btn-secondary" onClick={handleClose}>Cancel</button>
                             </div>
                         </form>
 

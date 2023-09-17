@@ -1,3 +1,5 @@
+import FooterComponent from "./FooterComponent";
+
 function NewsComponent () {
 
     return(
@@ -47,6 +49,7 @@ function NewsComponent () {
 
           </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

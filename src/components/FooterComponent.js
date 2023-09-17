@@ -14,7 +14,7 @@ function FooterComponent () {
     const handleLogout = (event) => {
         event.preventDefault()
         dispatch(userLogout())
-        navigate(-1)
+        navigate("/")
 
     }
 
@@ -51,7 +51,7 @@ function FooterComponent () {
                             <li><i className="bx bx-chevron-right"></i> <Link to={"/about"}>About Us</Link></li>
                             <li><i className="bx bx-chevron-right"></i> <Link to={"/products"}>Products</Link></li>
                             <li><i className="bx bx-chevron-right"></i> <Link to={"/contact"}>Contact Us</Link></li>
-                            { !isLoggedIn ? <li><i className="bx bx-chevron-right"></i> <Link to={"/login"}>Login</Link></li> : <li><i className="bx bx-chevron-right"></i> <Link onClick={handleLogout}>Logout</Link></li>}
+                            { !isLoggedIn ? <li><i className="bx bx-chevron-right"></i> <Link to={"/login"}>Login</Link></li> : <li><i className="bx bx-chevron-right"></i> <Link><a onClick={handleLogout}>Logout</a></Link></li>}
                             </ul>
                         </div>
 
