@@ -7,7 +7,9 @@ function LoginComponent () {
 
     const dispatch = useDispatch()
     const [user, setUser] = useState({})
-    // const loggedIn = useSelector((state) => state.authSlice.loggedIn)
+    const isLoggedIn = useSelector((state) => state.authSlice.loggedIn)
+    const error = useSelector((state) => state.authSlice.error)
+    const isLoading = useSelector((state) => state.authSlice.isLoading)
 
 
     const navigate = useNavigate()
@@ -29,7 +31,7 @@ function LoginComponent () {
             event.stopPropagation()
         } else if (form.checkValidity() === true) {
             dispatch(userLogin(user))
-            navigate(-1)
+            navigate("/")
             // console.log(localStorage.getItem('token'))
             // setValidated(true)
         }
@@ -37,8 +39,30 @@ function LoginComponent () {
         
     }
 
+    useEffect(() => {
+        // dispatch(getAllPosts())
+        // console.log(posts)
+    }, [isLoggedIn, isLoading, error])
+
     return(
         <>
+        {isLoading && 
+            <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status"></div>
+            </div> }
+            {!isLoading && error ? 
+                <div className="col-lg-12 justify-content-center entries">
+
+                    <article className="entry">
+
+                    <h2 className="entry-content text-center">
+                        <a href="blog-single.html">{error}</a>
+                    </h2>
+
+                    </article>
+
+                </div>
+                 : null }
         <section className="sinner-page mt-5 align-items-center justify-content-center">
             <div className="container">
                 <div className="row justify-content-center">

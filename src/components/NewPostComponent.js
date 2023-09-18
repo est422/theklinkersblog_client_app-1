@@ -9,6 +9,9 @@ function NewPostComponent () {
     const dispatch = useDispatch()
     const [validated, setValidated] = useState(false)
     const [post, setPost] = useState({})
+    const error = useSelector((state) => state.postsSlice.error)
+    const isLoading = useSelector((state) => state.postsSlice.isLoading)
+    // const date = new Date().toISOString().slice(0, 19).replace('T', ' ')
 
     const navigate = useNavigate()
     const handleClose = (event) => {
@@ -29,16 +32,37 @@ function NewPostComponent () {
             event.stopPropagation()
         } else if (form.checkValidity() === true) {
             dispatch(createPost(post))
-            navigate(-1)
+            navigate("/blogs")
             // setValidated(true)
         }
         setValidated(true)
         
     }
 
+    useEffect(() => {
+        // dispatch(getAllPosts())
+        // console.log(posts)
+    }, [])
 
     return(
         <>
+        {isLoading && 
+                <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status"></div>
+                </div> }
+                {!isLoading && error ? 
+                <div className="col-lg-12 justify-content-center entries">
+
+                    <article className="entry">
+
+                    <h2 className="entry-content text-center">
+                        <a href="blog-single.html">{error}</a>
+                    </h2>
+
+                    </article>
+
+                </div>
+                 : null}
         <section id="contact" className="contact">
             <div className="container pt-5">
 
@@ -51,10 +75,12 @@ function NewPostComponent () {
                             <input type="text" className="form-control" name="postTitle" onChange={handleInputsChange} placeholder="Title"/>
                             </div>
                             <div className="col-lg-6">
-                            <select id="inputState" className="form-select" onChange={handleInputsChange}>
-                                {/* <option>Choose category</option> */}
-                                <option defaultValue="Ppr">Ppr</option>
-                                <option defaultValue="ConstructionChemicals">Construction Chemicals</option>
+                            <select id="inputState" className="form-select" name="postCategory" onChange={handleInputsChange}>
+                                <option>Choose category</option>
+                                <option value="Ppr">Ppr</option>
+                                <option value="ConstructionChemicals">Construction Chemicals</option>
+                                <option value="SanitaryWare">Sanitary Ware</option>
+
                             </select>
                             </div>
                             <div className="col-lg-12">

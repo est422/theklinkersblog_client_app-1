@@ -19,17 +19,17 @@ function DeletePostComponent () {
     const handleDelete = (id) => {
         // console.log(`delete post id ${id}`)
         dispatch(deletePost(id))
-        handleClose()
+        navigate("/blogs")
     }
 
     useEffect(() => {
         // console.log("delete post id", id)
-    }, [id]) 
+    }, [id, post]) 
 
     return(
         <>
         <section id="contact" className="contact">
-            <div className="container">
+            <div className="container pt-5">
                 <div className="card">
                     <div className="card-body">
                     <h5 className="card-title">Delete Post</h5>

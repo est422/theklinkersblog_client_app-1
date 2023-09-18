@@ -27,12 +27,17 @@ function BlogsComponent () {
         // console.log(posts)
     }, [isLoggedIn])
 
+    useEffect(() => {
+        // dispatch(getAllPosts())
+        // console.log(posts)
+    }, [isLoading, error])
+
 
     return(
         <>
         <main id='main'>
             <section id="blog" className="blog">
-                <div className="container" data-aos="fade-up">
+                <div className="container pt-5" data-aos="fade-up">
                 {isLoading && 
                 <div className="d-flex justify-content-center">
                 <div className="spinner-border" role="status"></div>
@@ -67,7 +72,7 @@ function BlogsComponent () {
                         <div className="entry-meta">
                             <ul>
                             {/* <li className="d-flex align-items-center"><i className="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li> */}
-                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i><time dateTime="2020-01-01">Jan 1, 2020</time></li>
+                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i><time dateTime={post.postDate}>{post.postDate}</time></li>
                             {/* <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li>
                             <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> */}
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
@@ -86,7 +91,7 @@ function BlogsComponent () {
 
                         </article>))}
                     </div>
-                    <div className="col-lg-4">
+                    {!error ? <div className="col-lg-4">
 
                         <div className="sidebar">
 
@@ -109,8 +114,8 @@ function BlogsComponent () {
 
                         </div>
 
-                        </div>
-                        </div>
+                        </div> : null}
+                    </div> 
 
                 </div>
             </section>
