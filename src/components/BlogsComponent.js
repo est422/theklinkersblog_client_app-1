@@ -35,15 +35,21 @@ function BlogsComponent () {
 
     return(
         <>
-        <main id='main'>
-            <section id="blog" className="blog">
-                <div className="container pt-5" data-aos="fade-up">
-                {isLoading && 
+        <div className="breadcrumbs">
+            <div className="breadcrumbs">
+            {/* <img src="assets/images/testimonials-bg.png" className="bd-placeholder-img img-fluid" alt="" /> */}
+            </div>
+        </div>
+        <section className="inner-page pt-3">
+        <div id="blog" className="blog">
+            <div className="container" data-aos="fade-up">
+                
+            {isLoading && 
                 <div className="d-flex justify-content-center">
                 <div className="spinner-border" role="status"></div>
                 </div> }
                 {!isLoading && error ? 
-                <div className="col-lg-12 justify-content-center entries">
+                <div className="col-lg-6 justify-content-center entries">
 
                     <article className="entry">
 
@@ -55,11 +61,91 @@ function BlogsComponent () {
 
                 </div>
                  : null}
-                <div className="row">          
 
-                    <div className="col-lg-8 entries">
+                <div className='row'>
+                    <div className="sidebar">
 
-                    {posts.map((post, i) => (<article key={i} className="entry">
+                        <div className="col-lg-12 search-form">
+                            <form action="">
+                            <input type="text" />
+                            <button type="submit"><i className="bi bi-search"></i></button>
+                            </form>
+                        </div>                            
+                    </div>
+                </div>
+                <div className="row gy-4 posts-list">
+                    
+                    {posts.map((post, i) => (<div key={i} className="col-lg-6 entries">
+
+                    <article className="entry">
+
+                        <div className="entry-img">
+                            <img src="assets/images/services/img-1.jpg" alt="" className="img-fluid" />
+                        </div>
+
+                        <h2 className="entry-title">
+                            <a href="blog-single.html">{post.postTitle}</a>
+                        </h2>
+
+                        <div className="entry-meta">
+                            <ul>
+                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{post.postDate}</li>
+                            {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
+                            {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
+                            </ul>
+                        </div>
+
+                        <div className="entry-content">
+                            <p>
+                            {post.postDescription.substring(0, 200)}
+                            </p>
+                            <div className="read-more">
+                            <a href="blog-single.html">Read More</a>
+                            </div>
+                        </div>
+
+                        </article>
+                    </div>))} 
+
+                </div>
+
+                <div className="blog-pagination">
+                <ul className="justify-content-center">
+                    <li><a href="#">1</a></li>
+                    <li className="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+                </div>
+
+            </div>
+            </div>
+            </section>
+
+        {/* <main id='main'>
+            <section id="blog" className="blog">
+                <div className="container pt-5" data-aos="fade-up">
+                {isLoading && 
+                <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status"></div>
+                </div> }
+                {!isLoading && error ? 
+                <div className="col-lg-6 justify-content-center entries">
+
+                    <article className="entry">
+
+                    <h2 className="entry-content text-center">
+                        <a href="blog-single.html">{error}</a>
+                    </h2>
+
+                    </article>
+
+                </div>
+                 : null}
+                <div className="row">           */}
+
+                {/* {posts.map((post, i) => (<div className="col-lg-12 entries">
+
+                    <article key={i} className="entry">
 
                         <div className="entry-img">
                             <img src="assets/img/blog/blog-1.jpg" alt="" className="img-fluid" />
@@ -71,10 +157,7 @@ function BlogsComponent () {
 
                         <div className="entry-meta">
                             <ul>
-                            {/* <li className="d-flex align-items-center"><i className="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li> */}
-                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i><time dateTime={post.postDate}>{post.postDate}</time></li>
-                            {/* <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li>
-                            <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> */}
+                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{post.postDate}</li>
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
                             </ul>
@@ -89,9 +172,9 @@ function BlogsComponent () {
                             </div>
                         </div>
 
-                        </article>))}
-                    </div>
-                    {!error ? <div className="col-lg-4">
+                        </article>
+                    </div>))} */}
+                    {/* {!error ? <div className="col-lg-4">
 
                         <div className="sidebar">
 
@@ -114,12 +197,12 @@ function BlogsComponent () {
 
                         </div>
 
-                        </div> : null}
-                    </div> 
+                        </div> : null} */}
+                    {/* </div> 
 
                 </div>
-            </section>
-        </main>
+            </section> */}
+        {/* </main> */}
         <FooterComponent />
         </>
     )

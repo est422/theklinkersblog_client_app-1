@@ -67,7 +67,7 @@ function FooterComponent () {
 
                         <div className="col-lg-4 col-md-6 footer-info">
                             <h4>About Us</h4>
-                            <p>Our mother company EKT Trade and investment is one of the pioneers in import & export business in Ethiopia.</p>
+                            <p>Our mother company EKT Trade and investment is one of the pioneers in import and export business in Ethiopia.</p>
                             <div className="social-links mt-3">
                             <a href="#" className="youtube"><i className="bx bxl-youtube"></i></a>
                             <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
