@@ -35,12 +35,15 @@ function BlogsComponent () {
 
     return(
         <>
-        <div className="breadcrumbs">
-            <div className="breadcrumbs">
-            {/* <img src="assets/images/testimonials-bg.png" className="bd-placeholder-img img-fluid" alt="" /> */}
+
+        <section className="inner-page">
+            <div className="team col-lg-12 p-1">
+                <div className="member" style={{backgroundImage: "url('assets/images/slider/slide-1.jpg')", width: "100%", height: "70vh"}}>
+                    {/* <div className="member-img"> */}
+                    {/* <img src="assets/images/slider/slide-1.jpg" className="bd-placeholder-img img-fluid" alt="" /> */}
+                    {/* </div> */}
+                </div>
             </div>
-        </div>
-        <section className="inner-page pt-3">
         <div id="blog" className="blog">
             <div className="container" data-aos="fade-up">
                 
@@ -49,7 +52,7 @@ function BlogsComponent () {
                 <div className="spinner-border" role="status"></div>
                 </div> }
                 {!isLoading && error ? 
-                <div className="col-lg-6 justify-content-center entries">
+                <div className="col-lg-12 justify-content-center entries">
 
                     <article className="entry">
 
@@ -61,8 +64,51 @@ function BlogsComponent () {
 
                 </div>
                  : null}
+                
+                {/* <div class="p-4 p-md-5 mb-4 text-white rounded bg-light image-fluid" style={{backgroundImage: "url('assets/images/slider/slide-1.jpg')"}}>
+                    <div class="col-lg-12 px-0">
+                    <h1 class="display-4 fst-italic">Welcome to our blog</h1>
+                    </div>
+                </div> */}
+                    
+                <div class="container">
+                    <header class="blog-header py-1">
+                        {/* <div class="row flex-nowrap justify-content-between align-items-center">
+                        <div className="col-lg-12 blog sidebar search-form">
+                            <form action="">
+                            <input type="text" />
+                            <button type="submit"><i className="bi bi-search"></i></button>
+                            </form>
+                        </div>
+                        </div> */}
+                    <div className='row'>
+                        <div className="col-lg-12 search-form">
+                            <form action="">
+                            <input type="text" />
+                            <button type="submit"><i className="bi bi-search"></i></button>
+                            </form>
+                        </div>                            
+                    </div>
+                    </header>
 
-                <div className='row'>
+                    <div class="nav-scroller py-1 mb-2">
+                        <nav class="nav d-flex justify-content-between">
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        <a class="p-2 link-secondary" href="#">Category</a>
+                        </nav>
+                    </div>
+                </div>
+                {/* <div className='row'>
                     <div className="sidebar">
 
                         <div className="col-lg-12 search-form">
@@ -72,7 +118,7 @@ function BlogsComponent () {
                             </form>
                         </div>                            
                     </div>
-                </div>
+                </div> */}
                 <div className="row gy-4 posts-list">
                     
                     {posts.map((post, i) => (<div key={i} className="col-lg-6 entries">
