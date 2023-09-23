@@ -12,11 +12,16 @@ function NewPostComponent () {
     const error = useSelector((state) => state.postsSlice.error)
     const isLoading = useSelector((state) => state.postsSlice.isLoading)
     // const date = new Date().toISOString().slice(0, 19).replace('T', ' ')
+    const [file, setFile] = useState([]);
 
     const navigate = useNavigate()
     const handleClose = (event) => {
         event.preventDefault()
         navigate("/blogs")
+    }
+
+    function handleChange(e) {
+        setFile(e.target.files[0]);
     }
 
     const handleInputsChange = (e) => {
@@ -26,12 +31,20 @@ function NewPostComponent () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        console.log(post)
         const form = event.currentTarget
+        let formData = new FormData()
 
         if (form.checkValidity() === false) {
             event.stopPropagation()
         } else if (form.checkValidity() === true) {
-            dispatch(createPost(post))
+            
+            formData.append("postImage", file)
+            formData.append('postTitle', post.postTitle)
+            formData.append('postDescription', post.postDescription)
+            formData.append('postCategory', post.postCategory)
+
+            dispatch(createPost(formData))
             navigate("/blogs")
             // setValidated(true)
         }
@@ -72,23 +85,30 @@ function NewPostComponent () {
                         <h5 className="card-title">New post</h5>
                         <form className="row g-3" onSubmit={handleSubmit}>
                             <div className="col-lg-6">
-                            <input type="text" className="form-control" name="postTitle" onChange={handleInputsChange} placeholder="Title"/>
+                            <input type="text" className="form-control" name="postTitle" onChange={handleInputsChange} placeholder="Title" required/>
                             </div>
                             <div className="col-lg-6">
-                            <select id="inputState" className="form-select" name="postCategory" onChange={handleInputsChange}>
+                            <select id="inputState" className="form-select" name="postCategory" onChange={handleInputsChange} required>
                                 <option>Choose category</option>
-                                <option value="Ppr">Ppr</option>
-                                <option value="ConstructionChemicals">Construction Chemicals</option>
-                                <option value="SanitaryWare">Sanitary Ware</option>
+                                <option value="PPR Pipe and Fitting">PPR Pipe and Fitting</option>
+                                <option value="Construction Chemicals">Construction Chemicals</option>
+                                <option value="Sanitary Ware">Sanitary Ware</option>
+                                <option value="Paint">Paint</option>
+                                <option value="Door Locks">Door Locks</option>
+                                <option value="Ceramic Tiles">Ceramic Tiles</option>
+                                <option value="SPC, UV Board and PVC Celling">SPC, UV Board and PVC Celling</option>
 
                             </select>
                             </div>
                             <div className="col-lg-12">
-                            <textarea type="text" className="form-control" name="postDescription" onChange={handleInputsChange} placeholder="Description" style={{height: "200px"}}/>
+                            <textarea type="text" className="form-control" name="postDescription" onChange={handleInputsChange} placeholder="Description" style={{height: "200px"}} required/>
+                            </div>
+                            <div className="col-lg-12">
+                            <input type="file" className="form-control" name="postImage" onChange={handleChange} required/>
                             </div>
                             <div className="text-center">
                             <button type="submit" className="btn btn-primary m-1">Submit</button>
-                            <button type="reset" className="btn btn-secondary" onClick={handleClose}>Reset</button>
+                            <button type="reset" className="btn btn-secondary" onClick={handleClose}>Cancel</button>
                             </div>
                         </form>
 

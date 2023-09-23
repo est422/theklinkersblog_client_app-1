@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import postsSlice, { getAllPosts } from '../slices/postsSlice'
 import { authSlice } from '../slices/authSlice'
 import FooterComponent from './FooterComponent'
+import HeaderComponent from './HeaderComponent'
 
 function BlogsComponent () {
 
@@ -13,6 +14,7 @@ function BlogsComponent () {
     const posts = useSelector((state) => state.postsSlice.posts)
     const error = useSelector((state) => state.postsSlice.error)
     const isLoading = useSelector((state) => state.postsSlice.isLoading)
+    // const postDate = new Date()
 
     const navigate = useNavigate()
     const handleUpdatePost = (postId) => {
@@ -35,15 +37,8 @@ function BlogsComponent () {
 
     return(
         <>
-
+        <HeaderComponent />
         <section className="inner-page">
-            <div className="team col-lg-12 p-1">
-                <div className="member" style={{backgroundImage: "url('assets/images/slider/slide-1.jpg')", width: "100%", height: "70vh"}}>
-                    {/* <div className="member-img"> */}
-                    {/* <img src="assets/images/slider/slide-1.jpg" className="bd-placeholder-img img-fluid" alt="" /> */}
-                    {/* </div> */}
-                </div>
-            </div>
         <div id="blog" className="blog">
             <div className="container" data-aos="fade-up">
                 
@@ -65,15 +60,15 @@ function BlogsComponent () {
                 </div>
                  : null}
                 
-                {/* <div class="p-4 p-md-5 mb-4 text-white rounded bg-light image-fluid" style={{backgroundImage: "url('assets/images/slider/slide-1.jpg')"}}>
-                    <div class="col-lg-12 px-0">
-                    <h1 class="display-4 fst-italic">Welcome to our blog</h1>
+                {/* <div className="p-4 p-md-5 mb-4 text-white rounded bg-light image-fluid" style={{backgroundImage: "url('assets/images/slider/slide-1.jpg')"}}>
+                    <div className="col-lg-12 px-0">
+                    <h1 className="display-4 fst-italic">Welcome to our blog</h1>
                     </div>
                 </div> */}
                     
-                <div class="container">
-                    <header class="blog-header py-1">
-                        {/* <div class="row flex-nowrap justify-content-between align-items-center">
+                <div className="container">
+                    <header className="blog-header py-2">
+                        {/* <div className="row flex-nowrap justify-content-between align-items-center">
                         <div className="col-lg-12 blog sidebar search-form">
                             <form action="">
                             <input type="text" />
@@ -91,20 +86,16 @@ function BlogsComponent () {
                     </div>
                     </header>
 
-                    <div class="nav-scroller py-1 mb-2">
-                        <nav class="nav d-flex justify-content-between">
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
-                        <a class="p-2 link-secondary" href="#">Category</a>
+                    <div className="nav-scroller py-2 mb-2">
+                        <nav className="nav d-flex justify-content-between">
+                        <a className="p-2 link-secondary">PPR Pipe and Fitting</a>
+                        <a className="p-2 link-secondary">Construction Chemicals</a>
+                        <a className="p-2 link-secondary">Sanitary Ware</a>
+                        <a className="p-2 link-secondary">Paint</a>
+                        <a className="p-2 link-secondary">Door Locks</a>
+                        <a className="p-2 link-secondary">Ceramic Tiles</a>
+                        <a className="p-2 link-secondary">SPC, UV Board and PVC Celling</a>
+                        
                         </nav>
                     </div>
                 </div>
@@ -135,7 +126,7 @@ function BlogsComponent () {
 
                         <div className="entry-meta">
                             <ul>
-                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{post.postDate}</li>
+                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{new Date(post.postDate).toISOString().substring(0, 10)}</li>
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
                             </ul>
@@ -144,6 +135,7 @@ function BlogsComponent () {
                         <div className="entry-content">
                             <p>
                             {post.postDescription.substring(0, 200)}
+                            {/* {post.postDescription} */}
                             </p>
                             <div className="read-more">
                             <a href="blog-single.html">Read More</a>
@@ -157,9 +149,8 @@ function BlogsComponent () {
 
                 <div className="blog-pagination">
                 <ul className="justify-content-center">
-                    <li><a href="#">1</a></li>
-                    <li className="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
+                    <li><a>Previous</a></li>
+                    <li><a>Next</a></li>
                 </ul>
                 </div>
 

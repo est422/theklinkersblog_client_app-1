@@ -13,14 +13,9 @@ export const getAllPosts = createAsyncThunk('posts/getAll', async () => {
     .then((response) => response.data)
 })
 
-export const createPost = createAsyncThunk('posts/create', async (post) => {
-  // console.log("p", post.postDescription )
-  // return await axios.post({
-  //   url: 'http://localhost:9000/api/posts/create',
-  //   headers: {"Content-type": "application.json"},
-  //   data: {postTitle: post.postTitle, postDescription: post.postDescription}
-  // })
-  return await axios.post('http://localhost:9000/api/posts/create', post)
+export const createPost = createAsyncThunk('posts/create', async (formData) => {
+  console.log("slicepost", formData )
+  return await axios.post('http://localhost:9000/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
   // return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', post)
   .then((response) => response.data)
 })

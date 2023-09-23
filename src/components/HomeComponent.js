@@ -9,10 +9,13 @@ function HomeComponent () {
 
     return(
         <>
+        
         <div className="page-wrapper">
+            {/* <HeaderComponent /> */}
             <IndexComponent />
-            <FooterComponent />
+            {/* <FooterComponent /> */}
         </div>
+        
         </>
         )
 }

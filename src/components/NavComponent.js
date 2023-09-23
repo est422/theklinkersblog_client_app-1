@@ -19,7 +19,7 @@ function NavComponent () {
 
     return(
         <>
-        <HeaderComponent />
+        {/*  */}
         <Routes>
             <Route exact path="/" element={<HomeComponent />} />
             <Route exact path="/about" element={<AboutUsComponent />}/>

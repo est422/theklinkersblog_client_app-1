@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import FooterComponent from "./FooterComponent";
+import HeaderComponent from "./HeaderComponent";
 
 function ProductsComponent () {
 
     return(
         <>
+        <HeaderComponent />
         <section className="inner-page pt-3">
           <div id="team" className="team">
             <div className="container py-5">
@@ -153,6 +156,7 @@ function ProductsComponent () {
             </div>
           </div>
         </section>
+        <FooterComponent />
         </>
     )
 }

@@ -1,9 +1,11 @@
 import FooterComponent from "./FooterComponent";
+import HeaderComponent from "./HeaderComponent";
 
 function ConstructionChemicals () {
 
     return (
         <>
+        <HeaderComponent />
         <section id="team" className="team">
           <div className="col-lg-12 p-1" data-aos="fade-up">
             <div className="member">
@@ -166,7 +168,7 @@ function ConstructionChemicals () {
                 <h2 data-aos="fade-up">Roofing</h2>
               </div>
 
-              <div className="col-lg-6" data-aos="fade-up">
+              <div className="col-lg-12  justify-content-center align-item-center" data-aos="fade-up">
                 <div className="member">
                   <div className="member-img">
                     <img src="assets/images/sealoflex-professional.jpg" className="bd-placeholder-img" alt="" />
@@ -232,7 +234,7 @@ function ConstructionChemicals () {
                 <h2 data-aos="fade-up">Concrete</h2>
               </div>
 
-              <div className="col-lg-6" data-aos="fade-up">
+              <div className="col-lg-12  justify-content-center align-item-center" data-aos="fade-up">
                 <div className="member">
                   <div className="member-img">
                     <img src="assets/images/sika-formoil.jpg" className="bd-placeholder-img" alt="" />
@@ -252,7 +254,7 @@ function ConstructionChemicals () {
                 <h2 data-aos="fade-up">Flooring</h2>
               </div>
 
-              <div className="col-lg-6" data-aos="fade-up">
+              <div className="col-lg-12 justify-content-center align-item-center" data-aos="fade-up">
                 <div className="member">
                   <div className="member-img">
                     <img src="assets/images/sikafloor-3-quart-z-top.jpg" className="bd-placeholder-img" alt="" />
