@@ -42,7 +42,22 @@ export const deletePost = createAsyncThunk('posts/delete', async (id) => {
 export const postsSlice = createSlice({
   name: 'posts',
   initialState,
-//   reducers: {},
+  reducers: {
+    searchFilter: (state, action) => {
+      console.log("payload", action.payload.searchInput)
+      state.isLoading = false
+      state.posts = state.posts.filter(p => {return p.postTitle === action.payload.searchInput})
+      state.error = ''
+
+    },
+    filterByCategory: (state, action) => {
+      // console.log("payload", action.payload.filterPost)
+      state.isLoading = false
+      // state.posts = state.posts.filter(p => {return p.postCategory === action.payload.filterPost})
+      state.error = ''
+
+    }
+  },
   extraReducers: (builder) => {
       builder.addCase(getAllPosts.pending, (state) => {
           state.isLoading = true
@@ -100,7 +115,7 @@ export const postsSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-// export const {  } = counterSlice.actions
+export const { searchFilter, filterByCategory } = postsSlice.actions
 // Selectors
 // export const allPatients = state => state.patients.patients;
 

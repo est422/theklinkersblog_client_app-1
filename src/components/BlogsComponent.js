@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, useNavigate  } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import postsSlice, { getAllPosts } from '../slices/postsSlice'
+import postsSlice, { filterByCategory, getAllPosts, searchFilter } from '../slices/postsSlice'
 import { authSlice } from '../slices/authSlice'
 import FooterComponent from './FooterComponent'
 import HeaderComponent from './HeaderComponent'
@@ -14,9 +14,31 @@ function BlogsComponent () {
     const posts = useSelector((state) => state.postsSlice.posts)
     const error = useSelector((state) => state.postsSlice.error)
     const isLoading = useSelector((state) => state.postsSlice.isLoading)
-    // const postDate = new Date()
+    const [searchInput, setSearchInput] = useState()
+    const [filterPosts, setFilterPosts] = useState()
 
     const navigate = useNavigate()
+
+    const handleSearchInputChange = (e) => {
+        e.preventDefault()
+        setSearchInput({...searchInput, searchInput: e.target.value})
+
+    }
+
+    const handleSearchFilter = (e) => {
+        e.preventDefault()
+        // setFilterPosts({...filterPosts, filterPosts: posts.filter(p => { return p.postTitle === searchInput.searchInput})})
+        // console.log(searchInput.searchInput)
+        dispatch(searchFilter(searchInput))
+    }
+
+    const handleFilterByCategory = (value) => {
+        // e.preventDefault()
+        setFilterPosts({...filterPosts, filterPosts: value})
+        console.log(filterPosts)
+        // dispatch(filterByCategory(filterPosts))
+    }
+
     const handleUpdatePost = (postId) => {
         navigate(`/blogs/edit/${postId}`)
     }
@@ -32,12 +54,13 @@ function BlogsComponent () {
     useEffect(() => {
         // dispatch(getAllPosts())
         // console.log(posts)
-    }, [isLoading, error])
+    }, [posts, isLoading, error])
 
 
     return(
         <>
         <HeaderComponent />
+        
         <section className="inner-page">
         <div id="blog" className="blog">
             <div className="container" data-aos="fade-up">
@@ -58,47 +81,46 @@ function BlogsComponent () {
                     </article>
 
                 </div>
-                 : null}
+                 : 
+                 <div className="blog container pb-4">
+                    <div className="blog-header py-2">
+                            {/* <div className="row flex-nowrap justify-content-between align-items-center">
+                            <div className="col-lg-12 blog sidebar search-form">
+                                <form action="">
+                                <input type="text" />
+                                <button type="submit"><i className="bi bi-search"></i></button>
+                                </form>
+                            </div>
+                            </div> */}
+                        <div className='row'>
+                            <div className="col-lg-12 search-form">
+                                <form action="">
+                                <input type="text" name='searchFiltter' onChange={handleSearchInputChange}/>
+                                <button type="submit" onClick={handleSearchFilter}><i className="bi bi-search"></i></button>
+                                </form>
+                            </div>                            
+                        </div>
+                        </div>
+
+                        <div className="nav-scroller py-2 mb-2">
+                            <div className="nav d-flex justify-content-between">
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="PPR Pipe and Fitting">PPR Pipe and Fitting</button>
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="Construction Chemicals">Construction Chemicals</button>
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="Sanitary Ware">Sanitary Ware</button>
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="Paint">Paint</button>
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="Door Locks">Door Locks</button>
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="Ceramic Tiles">Ceramic Tiles</button>
+                            <button className="p-2 btn btn-none" onClick={handleFilterByCategory} name="SPC, UV Board and PVC Celling">SPC, UV Board and PVC Celling</button>
+                            
+                        </div>
+                    </div>
+                </div>}
                 
                 {/* <div className="p-4 p-md-5 mb-4 text-white rounded bg-light image-fluid" style={{backgroundImage: "url('assets/images/slider/slide-1.jpg')"}}>
                     <div className="col-lg-12 px-0">
                     <h1 className="display-4 fst-italic">Welcome to our blog</h1>
                     </div>
                 </div> */}
-                    
-                <div className="container">
-                    <header className="blog-header py-2">
-                        {/* <div className="row flex-nowrap justify-content-between align-items-center">
-                        <div className="col-lg-12 blog sidebar search-form">
-                            <form action="">
-                            <input type="text" />
-                            <button type="submit"><i className="bi bi-search"></i></button>
-                            </form>
-                        </div>
-                        </div> */}
-                    <div className='row'>
-                        <div className="col-lg-12 search-form">
-                            <form action="">
-                            <input type="text" />
-                            <button type="submit"><i className="bi bi-search"></i></button>
-                            </form>
-                        </div>                            
-                    </div>
-                    </header>
-
-                    <div className="nav-scroller py-2 mb-2">
-                        <nav className="nav d-flex justify-content-between">
-                        <a className="p-2 link-secondary">PPR Pipe and Fitting</a>
-                        <a className="p-2 link-secondary">Construction Chemicals</a>
-                        <a className="p-2 link-secondary">Sanitary Ware</a>
-                        <a className="p-2 link-secondary">Paint</a>
-                        <a className="p-2 link-secondary">Door Locks</a>
-                        <a className="p-2 link-secondary">Ceramic Tiles</a>
-                        <a className="p-2 link-secondary">SPC, UV Board and PVC Celling</a>
-                        
-                        </nav>
-                    </div>
-                </div>
                 {/* <div className='row'>
                     <div className="sidebar">
 
@@ -110,6 +132,7 @@ function BlogsComponent () {
                         </div>                            
                     </div>
                 </div> */}
+                
                 <div className="row gy-4 posts-list">
                     
                     {posts.map((post, i) => (<div key={i} className="col-lg-6 entries">
@@ -117,7 +140,7 @@ function BlogsComponent () {
                     <article className="entry">
 
                         <div className="entry-img">
-                            <img src="assets/images/services/img-1.jpg" alt="" className="img-fluid" />
+                            <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" />
                         </div>
 
                         <h2 className="entry-title">
@@ -147,7 +170,7 @@ function BlogsComponent () {
 
                 </div>
 
-                <div className="blog-pagination">
+                <div className="blog-pagination pt-4">
                 <ul className="justify-content-center">
                     <li><a>Previous</a></li>
                     <li><a>Next</a></li>
