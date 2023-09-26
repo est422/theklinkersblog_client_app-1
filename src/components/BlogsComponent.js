@@ -140,7 +140,7 @@ function BlogsComponent () {
                     <article className="entry">
 
                         <div className="entry-img">
-                            <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" />
+                            <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" />
                         </div>
 
                         <h2 className="entry-title">
