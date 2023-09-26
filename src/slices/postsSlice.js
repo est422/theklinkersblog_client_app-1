@@ -16,7 +16,7 @@ export const getAllPosts = createAsyncThunk('posts/getAll', async () => {
 export const createPost = createAsyncThunk('posts/create', async (formData) => {
   console.log("slicepost", formData )
   return await axios.post('http://localhost:9000/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
-  // return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', post)
+  // return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
   .then((response) => response.data)
 })
 
