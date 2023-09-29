@@ -1923,6 +1923,7 @@ section {
   margin-bottom: 5px;
   font-size: 18px;
   color: #012970;
+  font-family: "Poppins", sans-serif;
 }
 
 .team .member .member-info span {
@@ -2404,9 +2405,15 @@ section {
   transition: 0.3s;
 }
 
-.blog .blog-pagination li a {
-  color: #ff5821;
-  padding: 7px 16px;
+.blog .blog-pagination li button {
+  
+  padding: 0 15px;
+  background: #ff5821;
+  color: #fff;
+  border-radius: 1px;
+  border-color: #fff;
+  /* color: #ff5821; */
+  /* padding: 7px 16px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2612,17 +2619,17 @@ section {
 }
 
 /* BootstrapBlog */
-.blog-header {
+.blog-top {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.blog-header-logo {
+.blog-top-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
   font-size: 2.25rem;
 }
 
-.blog-header-logo:hover {
+.blog-top-logo:hover {
   text-decoration: none;
 }
 
@@ -2639,14 +2646,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.nav-scroller {
+.category-btns-scroller {
   position: relative;
   z-index: 2;
   height: 2.75rem;
   overflow-y: hidden;
 }
 
-.nav-scroller .nav {
+.category-btns-scroller .category-btns {
   display: flex;
   flex-wrap: nowrap;
   padding-bottom: 1rem;
@@ -2657,7 +2664,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-overflow-scrolling: touch;
 }
 
-.nav-scroller .nav-link {
+.category-btns-scroller .category-btns-link {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: .875rem;

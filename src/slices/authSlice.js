@@ -21,8 +21,8 @@ export const userLogin = createAsyncThunk('users/login', async (user) => {
   //   headers: {"Content-type": "application.json"},
   //   data: {postTitle: post.postTitle, postDescription: post.postDescription}
   // })
-  // return await axios.post('http://localhost:9000/api/users/login', {username: user.username, password: user.password})
-  return await axios.post('https://theklinkers-blog-backend.onrender.com/api/users/login', {username: user.username, password: user.password})
+  return await axios.post('http://localhost:9000/api/users/login', {username: user.username, password: user.password})
+  // return await axios.post('https://theklinkers-blog-backend.onrender.com/api/users/login', {username: user.username, password: user.password})
   .then((response) => response.data)
 })
 
