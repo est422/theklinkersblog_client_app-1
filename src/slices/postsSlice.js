@@ -8,29 +8,29 @@ const initialState = {
 }
 
 export const getPostsByCategory = createAsyncThunk('posts/getPostsByCategory', async (filterByCategory) => {
-  return await axios.get(`http://localhost:9000/api/posts/getPostsByCategory/${filterByCategory}`)
-  // return await axios.get('https://theklinkers-blog-backend.onrender.com/api/posts')
+  // return await axios.get(`http://localhost:9000/api/posts/getPostsByCategory/${filterByCategory}`)
+  return await axios.get('https://theklinkers-blog-backend.onrender.com/api/posts')
   .then((response) => response.data)
 })
 
 export const getAllPosts = createAsyncThunk('posts/getAll', async () => {
-    return await axios.get('http://localhost:9000/api/posts')
-    // return await axios.get('https://theklinkers-blog-backend.onrender.com/api/posts')
+    // return await axios.get('http://localhost:9000/api/posts')
+    return await axios.get('https://theklinkers-blog-backend.onrender.com/api/posts')
     .then((response) => response.data)
 })
 
 export const createPost = createAsyncThunk('posts/create', async (formData) => {
   // console.log("slicepost", formData )
-  return await axios.post('http://localhost:9000/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
-  // return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
+  // return await axios.post('http://localhost:9000/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
+  return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
   .then((response) => response.data)
 })
 
 export const updatePost = createAsyncThunk('posts/update', async ({id, updatedPost}) => {
 
   // console.log(`slice post ${updatedPost.postTitle, updatePost.postDescription}`)
-  return await axios.put(`http://localhost:9000/api/posts/update/${id}`, updatedPost)
-  // return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`, updatedPost)
+  // return await axios.put(`http://localhost:9000/api/posts/update/${id}`, updatedPost)
+  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`, updatedPost)
   .then((response) => response.data)
 
 })
@@ -39,8 +39,8 @@ export const deletePost = createAsyncThunk('posts/delete', async (id) => {
 
   // console.log(id)
 
-  return await axios.delete(`http://localhost:9000/api/posts/delete/${id}`)
-  // return await axios.delete(`https://theklinkers-blog-backend.onrender.com/api/posts/delete/${id}`)
+  // return await axios.delete(`http://localhost:9000/api/posts/delete/${id}`)
+  return await axios.delete(`https://theklinkers-blog-backend.onrender.com/api/posts/delete/${id}`)
   .then((response) => response.data)
 
 })

@@ -186,7 +186,7 @@ function IndexComponent () {
                     <div className="member-info">
                       <h4>SANITARY WARE PRODUCTS</h4>
                       <span><p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for PC Brand.</p></span>
-                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                      <span><Link to={"/sanitaryware"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -224,7 +224,7 @@ function IndexComponent () {
                     <div className="member-info">
                       <h4>PAINT PRODUCTS</h4>
                       <span><p>EKT CERAMICS® is the Official Distributor for JOTUN one of the world’s leading paints and coatings manufacturers,</p></span>
-                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                      <span><Link to={"/paint"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ function IndexComponent () {
                     <div className="member-info">                    
                       <h4>DOOR LOCK PRODUCTS</h4>
                       <span><p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for TESA ASSA ABLOY.</p></span>
-                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                      <span><Link to={"/doorlocks"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -262,7 +262,7 @@ function IndexComponent () {
                     <div className="member-info">                    
                       <h4>CERAMICS TILES</h4>
                       <span><p>When it comes to finding the perfect tiles to go with your new bathroom, kitchen, living area or outdoor space. </p></span>
-                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                      <span><Link to={"/ceramictiles"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>
@@ -281,7 +281,7 @@ function IndexComponent () {
                     <div className="member-info">                    
                       <h4>SPC ,UV Board &amp; PVC CEILING</h4>
                       <span><p> of Hanbon Brand SPC (Stone Polymer Composite) flooring, uv board (Marble sheet) wall decorative sheets , PVC ceiling and skirting</p></span>
-                      <span><Link to={"/ppr"} type="button" className="btn-view-more">Read More...</Link></span>
+                      <span><Link to={"#"} type="button" className="btn-view-more">Read More...</Link></span>
                     </div>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import FooterComponent from "./FooterComponent";
 import HeaderComponent from "./HeaderComponent";
 
-function PprComponent () {
+function PaintComponent () {
 
     return(
         <>
@@ -16,11 +16,12 @@ function PprComponent () {
                         <article className="entry entry-single">
 
                         <div className="entry-img">
-                            <img src="assets/images/project-single/img-1.jpg" alt="" className="img-fluid" />
+                            <img src="assets/images/project-single/img-6.jpg" alt="" className="img-fluid" />
                         </div>
 
                         <h2 className="entry-title">
-                            <a href="#">PPR PIPE &amp; FITTING PRODUCTS</a>
+                            <h2 href="#">PAINT PRODUCTS</h2><br/>
+                            <span>Official Distributor for...<img style={{width: "150px"}} src="assets/images/partners/img-5.jpg" alt=""/></span>
                         </h2>
 
                         <div className="entry-meta">
@@ -32,25 +33,22 @@ function PprComponent () {
                         </div>
 
                         <div className="entry-content">
-                            <p>
-                            EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for aQuapa Brand produced by Formul kalip plastic located in Istanbul Turkey.
-                            </p>
-
-                            <li>aQuapa PPR Pipe and fittings can be directly used for drinking water system ,wall floor radiator heating systems, air conditioning systems, and transferring any kind of liquid system .</li>
-                                 <li>aQuapa is certified by ISO 9000, CE, TSE, DVGW, SKZ, TZW, GOST, CSTB, UkrSEPRO</li>
-                                      	    <li>Have a guarantee period of 50 years with usage as 20 °C and 20 bars of pressure .</li>
-                                            <li>We have different type of PPR piping system which can be used for Cold water , Hot water and exposed area installation UV protected .</li>
-							<h3>Characteristics</h3>
+                        <p>EKT CERAMICS® is the Official Distributor for JOTUN one of the world’s leading paints and coatings manufacturers,<br/>
+								<span>“Paint is a beautifier, Protector of homes &amp; Buildings.”</span><br/>
+								Depending on their function paints are broadly characterized as either Interior or Exterior. <br/>
+							    Exterior Paints are exposed to all types of varying weather conditions; therefore, it requires to protect against UV (Radiation of the sun), fungal growth, fade resistance &amp; Water resistance. They are also supposed to be flexible for not easily crack on expansion &amp; contraction.<br/>
+								Whereas Interior paints are more to do aesthetics &amp; decoration, so they are supposed to have easy maintenance, washability and dampness prevention. <br/>
+								In addition, to those interior paints need to be low or Zero VOC in preventing air quality &amp; stain resistance for hiding brush &amp; roller marks.</p>
+							
+							     
+							<h3>We Supply &amp; Apply</h3>
                                 		 <p>
-											<ul>
-                                              <li><i className="ti-check"></i> Long life duration</li>
-											  <li><i className="ti-check"></i>High resistance to pressure </li>
-											  <li><i className="ti-check"></i>Heat better flexibility </li>
-											  <li><i className="ti-check"></i>High acoustic &amp; terminal insulation </li>
-											  <li><i className="ti-check"></i>High molecular weight </li>
-                                           	 <li><i className="ti-check"></i>Low MFI</li>
-										   </ul>
-										</p>
+											 <li><i className="ti-check"></i>Building Interior Paints</li>
+											 <li><i className="ti-check"></i>Decorative Paints</li>
+											 <li><i className="ti-check"></i>Building Exterior Paints</li>
+											 <li><i className="ti-check"></i>Stucco</li>
+											 <li><i className="ti-check"></i>Internal &amp; External Wall Primer coat</li>
+										 </p>
 
                         </div>
 
@@ -79,4 +77,4 @@ function PprComponent () {
     )
 }
 
-export default PprComponent;
+export default PaintComponent;

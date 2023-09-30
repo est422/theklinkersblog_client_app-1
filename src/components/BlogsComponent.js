@@ -119,8 +119,8 @@ function BlogsComponent () {
                     <article key={i} className="entry">
 
                         <div className="entry-img">
-                            {/* <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" /> */}
-                            <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" />
+                            <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" />
+                            {/* <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" /> */}
                         </div>
 
                         <h2 className="entry-title">
@@ -141,7 +141,7 @@ function BlogsComponent () {
                             {/* {post.postDescription} */}
                             </p>
                             <div className="read-more">
-                            <a href="blog-single.html">Read More</a>
+                            <Link to={`/post/${post.postId}`}>Read More</Link>
                             </div>
                         </div>
 
@@ -151,12 +151,12 @@ function BlogsComponent () {
                         <article key={i} className="entry">
 
                             <div className="entry-img">
-                                {/* <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" /> */}
-                                <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" />
+                                <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" />
+                                {/* <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" /> */}
                             </div>
 
                             <h2 className="entry-title">
-                                <a href="blog-single.html">{post.postTitle}</a>
+                                <Link to={`/post/${post.postId}`}>{post.postTitle}</Link>
                             </h2>
 
                             <div className="entry-meta">
@@ -173,7 +173,7 @@ function BlogsComponent () {
                                 {/* {post.postDescription} */}
                                 </p>
                                 <div className="read-more">
-                                <a href="blog-single.html">Read More</a>
+                                <Link to={`/post/${post.postId}`}>Read More</Link>
                                 </div>
                             </div>
 

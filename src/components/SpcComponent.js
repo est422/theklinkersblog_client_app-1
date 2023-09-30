@@ -1,11 +1,9 @@
 import FooterComponent from "./FooterComponent";
-import HeaderComponent from "./HeaderComponent";
 
-function PprComponent () {
+function SpcComponent () {
 
     return(
         <>
-        <HeaderComponent />
         <section id="blog" className="blog py-5">
             <div className="container" data-aos="fade-up">
 
@@ -16,11 +14,12 @@ function PprComponent () {
                         <article className="entry entry-single">
 
                         <div className="entry-img">
-                            <img src="assets/images/project-single/img-1.jpg" alt="" className="img-fluid" />
+                            <img src="assets/images/project-single/img-2.jpg" alt="" className="img-fluid" />
                         </div>
 
                         <h2 className="entry-title">
-                            <a href="#">PPR PIPE &amp; FITTING PRODUCTS</a>
+                            <h2 href="#">SDOOR LOCK PRODUCTS</h2>
+                            <span>Exclusive Country’s Representative for...<img style="width: 150px" src="assets/images/partners/img-4.jpg" alt=""/></span>
                         </h2>
 
                         <div className="entry-meta">
@@ -32,25 +31,21 @@ function PprComponent () {
                         </div>
 
                         <div className="entry-content">
-                            <p>
-                            EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for aQuapa Brand produced by Formul kalip plastic located in Istanbul Turkey.
-                            </p>
-
-                            <li>aQuapa PPR Pipe and fittings can be directly used for drinking water system ,wall floor radiator heating systems, air conditioning systems, and transferring any kind of liquid system .</li>
-                                 <li>aQuapa is certified by ISO 9000, CE, TSE, DVGW, SKZ, TZW, GOST, CSTB, UkrSEPRO</li>
-                                      	    <li>Have a guarantee period of 50 years with usage as 20 °C and 20 bars of pressure .</li>
-                                            <li>We have different type of PPR piping system which can be used for Cold water , Hot water and exposed area installation UV protected .</li>
-							<h3>Characteristics</h3>
+                        <p>in Ethiopia for TESA ASSA ABLOY the leading Spanish manufacturer of locking and access control solutions for the residential and institutional market.<br/>
+Worldwide TESA ASSA ABLOY has a long and proven track record beginning from 1941 which is in the market for more than 80 Successful years.<br/>
+TESA ASSA ABLOY is renowned for its quality, innovation and the application of the latest technology in its products.<br/>
+Our solutions are tested and certified according to EN Standards (with marking) and are compatible with environmental requirements.<br/>
+We offer a complete range of access solutions that make people feel safe in a simple and easy to use way in any kind of building and environment.</p>
+							
+							     
+							<h3>Product Category</h3>
                                 		 <p>
-											<ul>
-                                              <li><i className="ti-check"></i> Long life duration</li>
-											  <li><i className="ti-check"></i>High resistance to pressure </li>
-											  <li><i className="ti-check"></i>Heat better flexibility </li>
-											  <li><i className="ti-check"></i>High acoustic &amp; terminal insulation </li>
-											  <li><i className="ti-check"></i>High molecular weight </li>
-                                           	 <li><i className="ti-check"></i>Low MFI</li>
-										   </ul>
-										</p>
+											 <li><i className="ti-check"></i>Security locks</li>
+											 <li><i className="ti-check"></i>Patented Locks</li>
+											 <li><i className="ti-check"></i>Master Keyed Cylinders</li>
+											 <li><i className="ti-check"></i>Door Closers and Hinges</li>
+											 <li><i className="ti-check"></i>Smartair Electronic Door Locking Solutions</li>
+										 </p>
 
                         </div>
 
@@ -79,4 +74,4 @@ function PprComponent () {
     )
 }
 
-export default PprComponent;
+export default SpcComponent;

@@ -1,7 +1,7 @@
 import FooterComponent from "./FooterComponent";
 import HeaderComponent from "./HeaderComponent";
 
-function PprComponent () {
+function SanitaryWareComponent () {
 
     return(
         <>
@@ -16,11 +16,11 @@ function PprComponent () {
                         <article className="entry entry-single">
 
                         <div className="entry-img">
-                            <img src="assets/images/project-single/img-1.jpg" alt="" className="img-fluid" />
+                            <img src="assets/images/project-single/img-2.jpg" alt="" className="img-fluid" />
                         </div>
 
                         <h2 className="entry-title">
-                            <a href="#">PPR PIPE &amp; FITTING PRODUCTS</a>
+                            <h2 href="#">SANITARY WARE PRODUCTS</h2>
                         </h2>
 
                         <div className="entry-meta">
@@ -32,25 +32,24 @@ function PprComponent () {
                         </div>
 
                         <div className="entry-content">
-                            <p>
-                            EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for aQuapa Brand produced by Formul kalip plastic located in Istanbul Turkey.
-                            </p>
-
-                            <li>aQuapa PPR Pipe and fittings can be directly used for drinking water system ,wall floor radiator heating systems, air conditioning systems, and transferring any kind of liquid system .</li>
-                                 <li>aQuapa is certified by ISO 9000, CE, TSE, DVGW, SKZ, TZW, GOST, CSTB, UkrSEPRO</li>
-                                      	    <li>Have a guarantee period of 50 years with usage as 20 °C and 20 bars of pressure .</li>
-                                            <li>We have different type of PPR piping system which can be used for Cold water , Hot water and exposed area installation UV protected .</li>
-							<h3>Characteristics</h3>
+                        <p>EKT CERAMICS® is the Exclusive Country Representative in Ethiopia for PRIMACERA (PC) Brand. All products are certified.</p>
+										
+							     
+							<h3>Product Category</h3>
                                 		 <p>
-											<ul>
-                                              <li><i className="ti-check"></i> Long life duration</li>
-											  <li><i className="ti-check"></i>High resistance to pressure </li>
-											  <li><i className="ti-check"></i>Heat better flexibility </li>
-											  <li><i className="ti-check"></i>High acoustic &amp; terminal insulation </li>
-											  <li><i className="ti-check"></i>High molecular weight </li>
-                                           	 <li><i className="ti-check"></i>Low MFI</li>
-										   </ul>
-										</p>
+											 
+											 <li><i className="ti-check"></i>Two Piece Toilet (WC) </li>
+											  <li><i className="ti-check"></i>One Piece Toilet (WC) </li>
+											  <li><i className="ti-check"></i>Intelligent Toilet </li>
+											  <li><i className="ti-check"></i>Pedestal Basin (Hand Wash Basin) </li>
+											  <li><i className="ti-check"></i>Counter Top Basin (Hand Wash Basin) </li>
+											 <li><i className="ti-check"></i>Squatting Pan (Turkish Type) </li>
+											  <li><i className="ti-check"></i>Urinal </li>
+											  <li><i className="ti-check"></i>Faucets </li>
+											  <li><i className="ti-check"></i>Bathroom Accessories </li>
+											 <li><i className="ti-check"></i>Shower Tray </li>
+											  
+                                      </p>
 
                         </div>
 
@@ -79,4 +78,4 @@ function PprComponent () {
     )
 }
 
-export default PprComponent;
+export default SanitaryWareComponent;
