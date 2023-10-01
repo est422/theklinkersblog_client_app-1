@@ -1,10 +1,12 @@
 import FooterComponent from "./FooterComponent";
+import HeaderComponent from "./HeaderComponent";
 
 function AboutUsComponent () {
 
     return(
         <>
-        <section className="about-us-section section-padding">
+        <HeaderComponent />
+        <section className="about-us-section section-padding pt-3">
             <div className="container">
                 <div className="row">
                     <div className="col col-md-6">
@@ -159,7 +161,7 @@ function AboutUsComponent () {
                 </div>
               </section> */}
 
-              <section id="team" className="team  py-5">
+              {/* <section id="team" className="team  py-5">
                 <div className="section-title">
                   <h2 data-aos="fade-up">Featured Projects</h2>
                     <p data-aos="fade-up">Explore What We've Done.</p>
@@ -214,7 +216,7 @@ function AboutUsComponent () {
                   </div>
 
                 </div>
-        </section>
+        </section> */}
         <FooterComponent />
         </>
     )

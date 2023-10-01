@@ -19,10 +19,10 @@ function DoorLocksComponent () {
                             <img src="assets/images/project-single/img-2.jpg" alt="" className="img-fluid" />
                         </div>
 
-                        <h2 className="entry-title">
+                        <div className="entry-title">
                             <h2 href="#">SDOOR LOCK PRODUCTS</h2>
                             <span>Exclusive Country’s Representative for...<img style="width: 150px" src="assets/images/partners/img-4.jpg" alt=""/></span>
-                        </h2>
+                        </div>
 
                         <div className="entry-meta">
                             <ul>

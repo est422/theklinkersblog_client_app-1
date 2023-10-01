@@ -19,9 +19,9 @@ function SanitaryWareComponent () {
                             <img src="assets/images/project-single/img-2.jpg" alt="" className="img-fluid" />
                         </div>
 
-                        <h2 className="entry-title">
+                        <div className="entry-title">
                             <h2 href="#">SANITARY WARE PRODUCTS</h2>
-                        </h2>
+                        </div>
 
                         <div className="entry-meta">
                             <ul>

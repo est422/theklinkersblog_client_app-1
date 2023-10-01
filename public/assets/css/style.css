@@ -1146,16 +1146,26 @@ section {
 } */
 
 .about .icon-boxes h4 {
-  font-size: 18px;
+  font-size: 28px;
+  font-weight: 600;
   color: #7f6d68;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .about .icon-boxes h3 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #554945;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-us-section .details h2 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  
 }
 
 .about .icon-box {
@@ -1918,7 +1928,7 @@ section {
   padding: 25px 15px;
 }
 
-.team .member .member-info h4 {
+.team .member .member-info h2 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 18px;
@@ -2121,6 +2131,7 @@ section {
   font-size: 16px;
   margin-right: 8px;
   line-height: 0;
+  
 }
 
 .blog .entry .entry-meta a {
@@ -2279,6 +2290,10 @@ section {
 .blog .blog-author p {
   font-style: italic;
   color: #a4a2a2;
+}
+
+.blog .enttry .entry-content ul li i {
+  color: #ff5821;
 }
 
 .blog .blog-comments {

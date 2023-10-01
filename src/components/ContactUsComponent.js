@@ -1,9 +1,11 @@
 import FooterComponent from "./FooterComponent";
+import HeaderComponent from "./HeaderComponent";
 
 function ContactUsComponent () {
 
     return(
         <>
+        <HeaderComponent />
         <section id="contact" className="contact">
             <div className="container">
 

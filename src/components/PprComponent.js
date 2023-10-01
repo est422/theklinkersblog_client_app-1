@@ -19,9 +19,9 @@ function PprComponent () {
                             <img src="assets/images/project-single/img-1.jpg" alt="" className="img-fluid" />
                         </div>
 
-                        <h2 className="entry-title">
-                            <a href="#">PPR PIPE &amp; FITTING PRODUCTS</a>
-                        </h2>
+                        <div className="entry-title">
+                            <h2 href="#">PPR PIPE &amp; FITTING PRODUCTS</h2>
+                        </div>
 
                         <div className="entry-meta">
                             <ul>

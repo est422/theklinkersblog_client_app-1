@@ -15,6 +15,7 @@ function UpdatePostComponent () {
         postTitle: post.postTitle,
         postDescription: post.postDescription
     })
+    const [file, setFile] = useState([]);
     // const [title, setTitle] = useState(post.postTitle)
     // const [description, setDescription] = useState(post.postDescription)
 
@@ -30,16 +31,25 @@ function UpdatePostComponent () {
         
     }
 
+    function handleChange(e) {
+        setFile(e.target.files[0]);
+        console.log(e.target.files[0])
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
         const form = event.currentTarget
-        // console.log(updatedPost)
+        let formData = new FormData()
 
         if (form.checkValidity() === false) {
             event.stopPropagation()
         } else if (form.checkValidity() === true) {
+            // formData.append('postImage', file)
+            // formData.append('postTitle', updatedPost.postTitle)
+            // formData.append('postDescription', updatedPost.postDescription)
+            // formData.append('postCategory', updatedPost.postCategory)
+            // dispatch(updatePost({id, formData}))
             dispatch(updatePost({id, updatedPost}))
-            navigate("/blogs")
             // setValidated(true)
         }
         setValidated(true)
@@ -64,15 +74,23 @@ function UpdatePostComponent () {
                             <input type="text" className="form-control" name="postTitle" onChange={handleInputsChange} placeholder="Title"/>
                             </div>
                             <div className="col-lg-6">
-                            <select id="inputState" className="form-select" onChange={handleInputsChange}>
-                                {/* <option>Choose category</option> */}
-                                <option defaultValue="Ppr">Ppr</option>
-                                <option defaultValue="ConstructionChemicals">Construction Chemicals</option>
+                            <select id="inputState" className="form-select" name="postCategory" onChange={handleInputsChange}>
+                            <option>Choose category</option>
+                                <option value="PPR Pipe and Fitting">PPR Pipe and Fitting</option>
+                                <option value="Construction Chemicals">Construction Chemicals</option>
+                                <option value="Sanitary Ware">Sanitary Ware</option>
+                                <option value="Paint">Paint</option>
+                                <option value="Door Locks">Door Locks</option>
+                                <option value="Ceramic Tiles">Ceramic Tiles</option>
+                                <option value="SPC, UV Board and PVC Celling">SPC, UV Board and PVC Celling</option>
                             </select>
                             </div>
                             <div className="col-lg-12">
                             <textarea type="text" className="form-control" name="postDescription" onChange={handleInputsChange} placeholder="Description" style={{height: "200px"}}/>
                             </div>
+                            {/* <div className="col-lg-12">
+                            <input type="file" className="form-control" name="postImage" onChange={handleChange}/>
+                            </div> */}
                             <div className="text-center">
                             <button type="submit" className="btn btn-primary m-1">Submit</button>
                             <button type="reset" className="btn btn-secondary" onClick={handleClose}>Cancel</button>

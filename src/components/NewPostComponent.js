@@ -31,7 +31,7 @@ function NewPostComponent () {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(post)
+        // console.log(post)
         const form = event.currentTarget
         let formData = new FormData()
 

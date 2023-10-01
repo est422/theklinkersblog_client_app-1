@@ -19,6 +19,7 @@ import PaintComponent from "./PaintComponent";
 import DoorLocksComponent from "./DoorLocksComponent";
 import CeramicTilesComponent from "./CeramicTilesComponent";
 import PostComponent from "./PostCompnent";
+import ProjectsComponent from "./ProjectsComponent";
 
 function NavComponent () {
 
@@ -29,6 +30,7 @@ function NavComponent () {
             <Route exact path="/" element={<HomeComponent />} />
             <Route exact path="/about" element={<AboutUsComponent />}/>
             <Route exact path="/products" element={<ProductsComponent />} />
+            <Route exact path="/projects" element={<ProjectsComponent />} />
             <Route exact path="/ppr" element={<PprComponent />} />
             <Route exact path="/sanitaryware" element={<SanitaryWareComponent />} />
             <Route exact path="/paint" element={<PaintComponent />} />

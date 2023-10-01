@@ -19,10 +19,10 @@ function PaintComponent () {
                             <img src="assets/images/project-single/img-6.jpg" alt="" className="img-fluid" />
                         </div>
 
-                        <h2 className="entry-title">
+                        <div className="entry-title">
                             <h2 href="#">PAINT PRODUCTS</h2><br/>
                             <span>Official Distributor for...<img style={{width: "150px"}} src="assets/images/partners/img-5.jpg" alt=""/></span>
-                        </h2>
+                        </div>
 
                         <div className="entry-meta">
                             <ul>
