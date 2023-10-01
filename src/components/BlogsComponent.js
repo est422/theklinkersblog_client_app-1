@@ -155,8 +155,8 @@ function BlogsComponent () {
                         <div className="entry-meta">
                             <ul>
                             <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{new Date(post.postDate).toISOString().substring(0, 10)}</li>
-                            <li className="d-flex align-items-center"><button className='btn btn-none' onClick={handleDislikeBtnClick(post.postId)}><i className="bi bi-hand-thumbs-down-fill"><span> 4</span></i></button></li>
-                            <li className="d-flex align-items-center"><button className='btn btn-none' onClick={handleLikeBtnClick(post.postId)}><i className="bi bi-hand-thumbs-up-fill"><span> 2</span></i></button></li>
+                            <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleDislikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-down-fill"><span> 4</span></i></button></li>
+                            <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleLikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-up-fill"><span> 2</span></i></button></li>
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
                             {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
                             </ul>
@@ -189,8 +189,8 @@ function BlogsComponent () {
                             <div className="entry-meta">
                                 <ul>
                                 <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{new Date(post.postDate).toISOString().substring(0, 10)}</li>
-                                <li className="d-flex align-items-center"><button className='btn btn-none' onClick={handleDislikeBtnClick(post.postId)}><i className="bi bi-hand-thumbs-down-fill"><span> 4</span></i></button></li>
-                                <li className="d-flex align-items-center"><button className='btn btn-none' onClick={handleLikeBtnClick(post.postId)}><i className="bi bi-hand-thumbs-up-fill"><span> 2</span></i></button></li>
+                                <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleDislikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-down-fill"><span> 4</span></i></button></li>
+                                <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleLikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-up-fill"><span> 2</span></i></button></li>
                                 {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
                                 {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
                                 </ul>
