@@ -9,7 +9,7 @@ const initialState = {
 
 export const getPostsByCategory = createAsyncThunk('posts/getPostsByCategory', async (filterByCategory) => {
   // return await axios.get(`http://localhost:9000/api/posts/getPostsByCategory/${filterByCategory}`)
-  return await axios.get('https://theklinkers-blog-backend.onrender.com/api/posts')
+  return await axios.get(`https://theklinkers-blog-backend.onrender.com/api/posts/getPostsByCategory/${filterByCategory}`)
   .then((response) => response.data)
 })
 
