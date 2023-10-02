@@ -106,11 +106,33 @@ function IndexComponent () {
               <div className="section-title">
                 <h2>About us</h2>
               </div>
-              <section className="about-us-section section-padding">
+              <section id="about" className="about section-bg">
                 <div className="container">
-                    {/* <div className="section-title">
-                      <h2>About us</h2>
-                    </div> */}
+
+                  <div className="row">
+                    
+
+                    <div className="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                      {/* <h4 data-aos="fade-up">About us</h4> */}
+                      <h3 data-aos="fade-up">WE PROVIDE BEST SELECTIONS OF FINISHING MATERIALS &amp; CONSTRUCTION CHEMICALS</h3>
+                      <p data-aos="fade-up">EKT CERAMICS® is a registered trade mark for The Klinkers Trading plc. The company has 18+ years of good reputation for delivering quality construction material solutions known with our mother company EKT Trade &amp; Investment Plc.<br /><br/>
+                              Our mother company EKT Trade and investment is one of the pioneers in import &amp; export business in Ethiopia. Since its establishment it has got solid experience in importing &amp; distributing high-quality building finishing materials, and construction Chemicals.</p>
+
+                              <div className="btns pt-5">
+                                <a href="about.html" className="theme-btn">Read More</a>
+                                <a href="contact.html" className="theme-btn-s3">Contact us</a>
+                              </div>
+
+                    </div>
+                    <div className="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative" data-aos="fade-right">
+                      <a href="#" className="glightbox play-btn mb-4"></a>
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+              {/* <section className="about-us-section">
+                <div className="container">
                     <div className="row">
                         <div className="col col-md-6">
                             <div className="details pt-5">
@@ -140,7 +162,7 @@ function IndexComponent () {
                         </div>
                     </div>
                 </div> 
-            </section>
+            </section> */}
 
             <section className="inner-page pt-3">
           <div id="team" className="team">

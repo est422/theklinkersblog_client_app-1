@@ -7,11 +7,13 @@ import NavComponent from './components/NavComponent';
 
 import { Provider } from 'react-redux';
 import { store } from './store';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
     <BrowserRouter>
+    <ScrollToTop />
     <Provider store={store}>
     <NavComponent />
     {/* <IndexComponent /> */}
