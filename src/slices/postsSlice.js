@@ -39,7 +39,7 @@ export const updateLikePost = createAsyncThunk('posts/update/like', async (id) =
 
   console.log(`slice post ${id}`)
   // return await axios.put(`http://localhost:9000/api/posts/update/like/${id}`, { headers: {'Content-Type': 'application/json'}})
-  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`)
+  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/like/${id}`)
   .then((response) => response.data)
 
 })
@@ -48,7 +48,7 @@ export const updateDislikePost = createAsyncThunk('posts/update/dislike', async 
 
   console.log(`slice post ${id}`)
   // return await axios.put(`http://localhost:9000/api/posts/update/dislike/${id}`, { headers: {'Content-Type': 'application/json'}})
-  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`)
+  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/dislike/${id}`)
   .then((response) => response.data)
 
 })
