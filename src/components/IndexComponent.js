@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import FooterComponent from "./FooterComponent";
-import HeaderComponent from "./HeaderComponent";
-import ProductsComponent from "./ProductsComponent";
+import { Link } from "react-router-dom"
+import FooterComponent from "./FooterComponent"
+import HeaderComponent from "./HeaderComponent"
+import ProductsComponent from "./ProductsComponent"
 
 function IndexComponent () {
 

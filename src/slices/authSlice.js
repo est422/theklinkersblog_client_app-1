@@ -40,7 +40,7 @@ export const authSlice = createSlice({
       state.isLoading = false
       state.error = ''
 
-    }
+    },
   },
   extraReducers: (builder) => {
       builder.addCase(getUser.pending, (state) => {

@@ -21,16 +21,16 @@ export const getAllPosts = createAsyncThunk('posts/getAll', async () => {
 
 export const createPost = createAsyncThunk('posts/create', async (formData) => {
   // console.log("slicepost", formData )
-  // return await axios.post('http://localhost:9000/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data', 'Autorization': localStorage.getItem('token')}})
-  return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data'}})
+  // return await axios.post('http://localhost:9000/api/posts/create', formData, { headers: {'Content-Type': 'multipart/form-data', 'Authorization': localStorage.getItem('token')}})
+  return await axios.post('https://theklinkers-blog-backend.onrender.com/api/posts/create', formData, { headers: {'Authorization': localStorage.getItem('token'), 'Content-Type': 'multipart/form-data'}})
   .then((response) => response.data)
 })
 
 export const updatePost = createAsyncThunk('posts/update', async ({id, updatedPost}) => {
 
-  console.log('slice post', updatedPost)
-  // return await axios.put(`http://localhost:9000/api/posts/update/${id}`, updatedPost, { headers: {'Content-Type': 'multipart/form-data'}})
-  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`, updatedPost)
+  // console.log('slice post', updatedPost)
+  // return await axios.put(`http://localhost:9000/api/posts/update/${id}`, updatedPost, { headers: {'Authorization': localStorage.getItem('token'), 'Content-Type': 'multipart/form-data'}})
+  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`, updatedPost, { headers: {'Authorization': localStorage.getItem('token'), 'Content-Type': 'multipart/form-data'}})
   .then((response) => response.data)
 
 })
@@ -57,8 +57,8 @@ export const deletePost = createAsyncThunk('posts/delete', async (id) => {
 
   // console.log(id)
 
-  // return await axios.delete(`http://localhost:9000/api/posts/delete/${id}`, { headers: {'Content-Type': 'application/json', 'Autorization': localStorage.getItem('token')}})
-  return await axios.delete(`https://theklinkers-blog-backend.onrender.com/api/posts/delete/${id}`)
+  // return await axios.delete(`http://localhost:9000/api/posts/delete/${id}`, { headers: {'Content-Type': 'application/json', 'Authorization': localStorage.getItem('token')}})
+  return await axios.delete(`https://theklinkers-blog-backend.onrender.com/api/posts/delete/${id}`, { headers: {'Authorization': localStorage.getItem('token')}})
   .then((response) => response.data)
 
 })
