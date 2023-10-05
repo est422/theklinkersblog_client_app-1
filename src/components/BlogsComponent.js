@@ -59,14 +59,14 @@ function BlogsComponent () {
     }
 
     const handleDislikeBtnClick = (id) => {
-        const post = posts.filter(p => { return p.postId === parseInt(id) })
+        // const post = posts.filter(p => { return p.postId === parseInt(id) })
         dispatch(updateDislikePost(id))
         navigate("/blogs")
 
     }
 
     const handleLikeBtnClick = (id) => {
-        const post = posts.filter(p => { return p.postId === parseInt(id) })                
+        // const post = posts.filter(p => { return p.postId === parseInt(id) })                
         dispatch(updateLikePost(id))
         navigate("/blogs")
     }
@@ -91,10 +91,10 @@ function BlogsComponent () {
             <div className="container" data-aos="fade-up">
                 
             {isLoading ? 
-                <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center">
                 <div className="spinner-border" role="status"></div>
-                </div> :
-                !isLoading && error ? 
+            </div> : null}
+            {!isLoading && error ? 
                 <div className="col-lg-12 justify-content-center entries">
 
                     <article className="entry">
@@ -106,74 +106,38 @@ function BlogsComponent () {
                     </article>
 
                 </div>
-                 : 
-                 <div className="blog container pb-4">
+                 : null}
+
+                { !isLoading && !error ?
+                <div className="row gy-4 posts-list">
+                    <div className="blog container pb-4">
 
                         <div className="category-btns-scroller py-2 mb-2">
                             <div className="category-btns d-flex justify-content-between">
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("PPR Pipe and Fitting")}}>PPR Pipe and Fitting</button>
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("Construction Chemicals")}}>Construction Chemicals</button>
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("Sanitary Ware")}}>Sanitary Ware</button>
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("Paint")}}>Paint</button>
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("Door Locks")}}>Door Locks</button>
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("Ceramic Tiles")}}>Ceramic Tiles</button>
-                            <button className="p-2 btn btn-secondary" onClick={() => {handleFilterByCategory("SPC, UV Board and PVC Celling")}}>SPC, UV Board and PVC Celling</button>
-                            
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("PPR Pipe and Fitting")}}>PPR Pipe and Fitting</button>
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("Construction Chemicals")}}>Construction Chemicals</button>
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("Sanitary Ware")}}>Sanitary Ware</button>
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("Paint")}}>Paint</button>
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("Door Locks")}}>Door Locks</button>
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("Ceramic Tiles")}}>Ceramic Tiles</button>
+                            <button className="p-2 btn btn-secondary" onClick={(e) => {handleFilterByCategory("SPC, UV Board and PVC Celling")}}>SPC, UV Board and PVC Celling</button>
+                            </div>  
                         </div>
                     </div>
-                </div>}
-                
+                    {posts.length === 0 ?
+                        <div className="col-lg-12 justify-content-center entries">
 
-                
-                {!isLoading && !error && posts.length === 0 ?
-                <div className="col-lg-12 justify-content-center entries">
+                            <article className="entry">
 
-                    <article className="entry">
+                            <h2 className="entry-content text-center">
+                                <a href="blog-single.html">Oops there's Nothing to display!</a>
+                            </h2>
 
-                    <h2 className="entry-content text-center">
-                        <a href="blog-single.html">Oops there's Nothing to display!</a>
-                    </h2>
+                            </article>
 
-                    </article>
-
-                </div> : <div className="row gy-4 posts-list">
-                    
-                    {posts.slice(0, noOfPosts).map((post, i) => (
-                    posts.length !== 1 ? <div key={i} className="col-lg-6 entries">
-
-                    <article className="entry">
-
-                        <div className="entry-img">
-                            <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" />
-                            {/* <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" /> */}
-                        </div>
-
-                        <h2 className="entry-title">
-                            <a href="blog-single.html">{post.postTitle}</a>
-                        </h2>
-
-                        <div className="entry-meta">
-                            <ul>
-                            <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{new Date(post.postDate).toISOString().substring(0, 10)}</li>
-                            {/* <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleDislikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-down-fill"><span>{post.postDislikes}</span></i></button></li>
-                            <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleLikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-up-fill"><span>{post.postLikes}</span></i></button></li> */}
-                            {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
-                            {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
-                            </ul>
-                        </div>
-
-                        <div className="entry-content">
-                            <p>
-                            {post.postDescription.substring(0, 200)}
-                            {/* {post.postDescription} */}
-                            </p>
-                            <div className="read-more">
-                            <Link to={`/post/${post.postId}`}>Read More</Link>
-                            </div>
-                        </div>
-
-                        </article>
-                    </div> : <div key={i} className="col-lg-12 entries">
+                        </div> : null}
+                        {posts.slice(0, noOfPosts).map((post, i) => (
+                        <div key={i} className="col-lg-6 entries">
 
                         <article className="entry">
 
@@ -183,14 +147,14 @@ function BlogsComponent () {
                             </div>
 
                             <h2 className="entry-title">
-                                <Link to={`/post/${post.postId}`}>{post.postTitle}</Link>
+                                <a href="blog-single.html">{post.postTitle}</a>
                             </h2>
 
                             <div className="entry-meta">
                                 <ul>
                                 <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{new Date(post.postDate).toISOString().substring(0, 10)}</li>
-                                {/* <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleDislikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-down-fill"><span>{post.postDislikes}</span></i></button></li>
-                                <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleLikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-up-fill"><span>{post.postLikes}</span></i></button></li> */}
+                                <li className="d-flex align-items-center"><i className="bi bi-hand-thumbs-down-fill"><span>{post.postDislikes}</span></i></li>
+                                <li className="d-flex align-items-center"><i className="bi bi-hand-thumbs-up-fill"><span>{post.postLikes}</span></i></li>
                                 {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
                                 {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
                                 </ul>
@@ -208,13 +172,13 @@ function BlogsComponent () {
 
                             </article>
                         </div>))} 
-                    {!isLoading && !error ? <div className="blog-pagination pt-4">
-                    <ul className="justify-content-center">
-                        {noOfPosts < posts.length ? <li><button className='read-more' onClick={() => {handleNextBtnClick()}}>Load More...</button></li> 
-                        : noOfPosts !== posts.length && posts.length !== 1 ? <li><button className='read-more' onClick={() => {handlePrevBtnClick()}}>Load Less...</button></li> : null}
-                    </ul>
+                        <div className="blog-pagination pt-4">
+                        <ul className="justify-content-center">
+                            {noOfPosts < posts.length ? <li><button className='read-more' onClick={() => {handleNextBtnClick()}}>Load More...</button></li> 
+                            : noOfPosts !== posts.length && posts.length !== 1 ? <li><button className='read-more' onClick={() => {handlePrevBtnClick()}}>Load Less...</button></li> : null}
+                        </ul>
+                        </div>
                     </div> : null}
-                </div>}
             </div>
            </div> 
         </section>

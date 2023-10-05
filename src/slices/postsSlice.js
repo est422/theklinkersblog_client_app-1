@@ -3,9 +3,23 @@ import axios from 'axios'
 
 const initialState = {
   posts: [],
+  post: {},
+  trendingPosts: [],
   isLoading: false,
   error: ''
 }
+
+export const getPostById = createAsyncThunk('posts/getPostById', async (id) => {
+  // return await axios.get(`http://localhost:9000/api/posts/${id}`)
+  return await axios.get(`https://theklinkers-blog-backend.onrender.com/api/posts/getPostsByCategory/${filterByCategory}`)
+  .then((response) => response.data)
+})
+
+export const getTrendingPosts = createAsyncThunk('posts/getTrendingPosts', async () => {
+  // return await axios.get("http://localhost:9000/api/posts/trending/posts")
+  return await axios.get(`https://theklinkers-blog-backend.onrender.com/api/posts/trending/posts`)
+  .then((response) => response.data)
+})
 
 export const getPostsByCategory = createAsyncThunk('posts/getPostsByCategory', async (filterByCategory) => {
   // return await axios.get(`http://localhost:9000/api/posts/getPostsByCategory/${filterByCategory}`)
@@ -37,7 +51,7 @@ export const updatePost = createAsyncThunk('posts/update', async ({id, updatedPo
 
 export const updateLikePost = createAsyncThunk('posts/update/like', async (id) => {
 
-  console.log(`slice post ${id}`)
+  // console.log(`slice post ${id}`)
   // return await axios.put(`http://localhost:9000/api/posts/update/like/${id}`, { headers: {'Content-Type': 'application/json'}})
   return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/like/${id}`)
   .then((response) => response.data)
@@ -46,7 +60,7 @@ export const updateLikePost = createAsyncThunk('posts/update/like', async (id) =
 
 export const updateDislikePost = createAsyncThunk('posts/update/dislike', async (id) => {
 
-  console.log(`slice post ${id}`)
+  // console.log(`slice post ${id}`)
   // return await axios.put(`http://localhost:9000/api/posts/update/dislike/${id}`, { headers: {'Content-Type': 'application/json'}})
   return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/dislike/${id}`)
   .then((response) => response.data)
@@ -83,6 +97,32 @@ export const postsSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
+      builder.addCase(getPostById.pending, (state) => {
+        state.isLoading = true
+      })
+      builder.addCase(getPostById.fulfilled, (state, action) => {
+          state.isLoading = false
+          state.post = action.payload
+          state.error = ''
+      })
+      builder.addCase(getPostById.rejected, (state, action) => {
+          state.isLoading = false
+          state.post = {}
+          state.error = action.error.message
+      })
+      builder.addCase(getTrendingPosts.pending, (state, action) => {
+        state.isLoading = true
+      })
+      builder.addCase(getTrendingPosts.fulfilled, (state, action) => {
+        state.isLoading = false
+        state.trendingPosts = action.payload
+        state.error = ''
+      })
+      builder.addCase(getTrendingPosts.rejected, (state, action) => {
+        state.isLoading = false
+        state.trendingPosts = []
+        state.error = action.error.message
+      })
       builder.addCase(getAllPosts.pending, (state) => {
           state.isLoading = true
       })
@@ -144,7 +184,7 @@ export const postsSlice = createSlice({
       })
       builder.addCase(updateDislikePost.fulfilled, (state, action) => {
         state.isLoading = false
-        state.posts = action.payload
+        // state.posts = {...state.posts, posts: action.payload}
         state.error = ''
       })
       builder.addCase(updateDislikePost.rejected, (state, action) => {
@@ -159,7 +199,7 @@ export const postsSlice = createSlice({
       })
       builder.addCase(updateLikePost.fulfilled, (state, action) => {
         state.isLoading = false
-        state.posts = action.payload
+        // state.posts = {...state.posts, posts: action.payload}
         state.error = ''
       })
       builder.addCase(updateLikePost.rejected, (state, action) => {
