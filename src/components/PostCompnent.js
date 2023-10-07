@@ -21,20 +21,24 @@ function PostComponent () {
     const handleDislikeBtnClick = (id) => {
         // const post = posts.filter(p => { return p.postId === parseInt(id) })
         dispatch(updateDislikePost(id))
-        navigate("/blogs")
+        .then(res => {navigate("/blogs")})
+        .catch(err => {console.log(err)})
+        // navigate("/blogs")
 
     }
 
     const handleLikeBtnClick = (id) => {
         // const post = posts.filter(p => { return p.postId === parseInt(id) })                
         dispatch(updateLikePost(id))
-        navigate("/blogs")
+        .then(res => {navigate("/blogs")})
+        .catch(err => {console.log(err)})
+        // navigate("/blogs")
     }
 
     useEffect(() => {
         // dispatch(getPostById(id))
         dispatch(getTrendingPosts())
-        console.log(trendingPosts)
+        // console.log(trendingPosts)
     }, [isLoggedIn])
 
     return(
@@ -50,8 +54,8 @@ function PostComponent () {
                         <article className="entry entry-single">
 
                             <div className="entry-img">
-                                <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" />
-                                {/* <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" /> */}
+                                {/* <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" /> */}
+                                <img src={`http://localhost:9000/images/${post.postImage}`} alt="" className="img-fluid" />
                             </div>
 
                             <h2 className="entry-title">
@@ -70,7 +74,7 @@ function PostComponent () {
 
                             <div className="entry-content">
                                 <p>
-                                {post.postDescription.substring(0, 200)}
+                                {post.postDescription}
                                 </p>
                             </div>
 
