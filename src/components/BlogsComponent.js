@@ -86,7 +86,7 @@ function BlogsComponent () {
         <>
         <HeaderComponent />
         
-        <section className="inner-page">
+        <section className="inner-page py-5">
         <div id="blog" className="blog">
             <div className="container" data-aos="fade-up">
                 

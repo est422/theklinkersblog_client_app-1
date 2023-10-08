@@ -44,7 +44,7 @@ export const updatePost = createAsyncThunk('posts/update', async ({id, formData}
 
   // console.log('slice post', formData.postImage)
   // return await axios.put(`http://localhost:9000/api/posts/update/${id}`, formData, { headers: {'Authorization': localStorage.getItem('token'), 'Content-Type': 'multipart/form-data'}})
-  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`, updatedPost, { headers: {'Authorization': localStorage.getItem('token'), 'Content-Type': 'multipart/form-data'}})
+  return await axios.put(`https://theklinkers-blog-backend.onrender.com/api/posts/update/${id}`, formData, { headers: {'Authorization': localStorage.getItem('token'), 'Content-Type': 'multipart/form-data'}})
   .then((response) => response.data)
 
 })
