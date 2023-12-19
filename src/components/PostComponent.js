@@ -146,6 +146,7 @@ function PostComponent() {
                     </div>
                   </div>
                 ) : null}
+                //List trending posts
                 {trendingPosts.slice(0, 4).map((p, i) => (
                   <div key={i} className="sidebar-item recent-posts">
                     <div className="post-item clearfix">
