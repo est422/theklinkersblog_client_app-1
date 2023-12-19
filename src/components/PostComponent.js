@@ -168,39 +168,6 @@ function PostComponent() {
           </div>
         </div>
       </section>
-      {/* {post.map((post, i) => (
-        <div key={i} className='blog entry-single d-flex justify-content-center p-1'>
-            <div className="col-lg-8 entries">
-
-                <article className="entry">
-
-                    <div className="entry-img">
-                        <img src={`https://theklinkers-blog-backend.onrender.com/images/${post.postImage}`} alt="" className="img-fluid" />
-                    </div>
-
-                    <h2 className="entry-title">
-                        <a href="blog-single.html">{post.postTitle}</a>
-                    </h2>
-
-                    <div className="entry-meta">
-                        <ul>
-                        <li className="d-flex align-items-center"><i className="bi bi-clock"></i>{new Date(post.postDate).toISOString().substring(0, 10)}</li>
-                        <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleDislikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-down-fill"><span> 4</span></i></button></li>
-                        <li className="d-flex align-items-center"><button className='btn btn-none' onClick={() => {handleLikeBtnClick(post.postId)}}><i className="bi bi-hand-thumbs-up-fill"><span> 2</span></i></button></li>
-                        {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-pencil"></i><Link to={`/blogs/edit/${post.postId}`}>Edit</Link></li> : null }
-                        {isLoggedIn ? <li className="d-flex align-items-center"><i className="bi bi-trash3"></i><Link to={`/blogs/delete/${post.postId}`}>Delete</Link></li> : null}
-                        </ul>
-                    </div>
-
-                    <div className="entry-content">
-                        <p>
-                        {post.postDescription.substring(0, 200)}
-                        </p>
-                    </div>
-
-                    </article>
-            </div>
-        </div>))} */}
       <FooterComponent />
     </>
   );
