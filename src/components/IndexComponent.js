@@ -326,7 +326,7 @@ function IndexComponent () {
                   <div className="col-lg-6">
                     <div className="icon-box">
                       <div className="icon"><i className="bi bi-person"></i></div>
-                      <h4><a href="">RELATIONSHIP</a></h4>
+                      <h4><p>RELATIONSHIP</p></h4>
                       <p>Through your whole journey with us the inherent practice in each activity we do we care for a long-lasting relationship and partnership.</p>
                     </div>
                   </div>
@@ -334,7 +334,7 @@ function IndexComponent () {
                   <div className="col-lg-6">
                     <div className="icon-box">
                       <div className="icon"><i className="bi bi-award"></i></div>
-                      <h4><a href="">CERTIFIED QUALITY PRODUCTS</a></h4>
+                      <h4><p>CERTIFIED QUALITY PRODUCTS</p></h4>
                       <p>All our products are quality certified and all of our imported products are European Standard certified.</p>
                     </div>
                   </div>
@@ -342,7 +342,7 @@ function IndexComponent () {
                   <div className="col-lg-6">
                     <div className="icon-box mt-4">
                       <div className="icon"><i className="bi bi-cpu"></i></div>
-                      <h4><a href="">BETTER REPUTATION</a></h4>
+                      <h4><p>BETTER REPUTATION</p></h4>
                       <p>Through the 18+ years’ experience we build an outstanding reputation with in a consistent &amp; customer centric services and expertise.</p>
                     </div>
                   </div>
@@ -350,7 +350,7 @@ function IndexComponent () {
                   <div className="col-lg-6">
                     <div className="icon-box mt-4">
                       <div className="icon"><i className="bi bi-clock"></i></div>
-                      <h4><a href="">TECHNICAL SUPPORT</a></h4>
+                      <h4><p>TECHNICAL SUPPORT</p></h4>
                       <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
                     </div>
                   </div>

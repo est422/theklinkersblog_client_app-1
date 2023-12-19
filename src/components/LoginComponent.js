@@ -34,7 +34,7 @@ function LoginComponent () {
         } else if (form.checkValidity() === true) {
             dispatch(userLogin(user))
             .then(response => {if(response.status === 200) return setLoginError(false)})
-            .catch(error => {return setLoginError(true)})
+            // .catch(error => {return setLoginError(true)})
             if(!loginError) return navigate("/")
             // console.log(localStorage.getItem('token'))
             // setValidated(true)
@@ -45,7 +45,7 @@ function LoginComponent () {
 
     useEffect(() => {
         // dispatch(getAllPosts())
-        // console.log(posts)
+        console.log(error)
     }, [isLoggedIn, isLoading, error])
 
     return(

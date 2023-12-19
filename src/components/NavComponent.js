@@ -18,7 +18,7 @@ import SanitaryWareComponent from "./SanitaryWareComponent";
 import PaintComponent from "./PaintComponent";
 import DoorLocksComponent from "./DoorLocksComponent";
 import CeramicTilesComponent from "./CeramicTilesComponent";
-import PostComponent from "./PostCompnent";
+import PostComponent from "./PostComponent";
 import ProjectsComponent from "./ProjectsComponent";
 
 function NavComponent () {

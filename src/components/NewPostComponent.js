@@ -12,6 +12,7 @@ function NewPostComponent () {
     const error = useSelector((state) => state.postsSlice.error)
     const isLoading = useSelector((state) => state.postsSlice.isLoading)
     // const date = new Date().toISOString().slice(0, 19).replace('T', ' ')
+    const today = new Date().toISOString().slice(0, 10);
     const [file, setFile] = useState([]);
 
     const navigate = useNavigate()
@@ -43,6 +44,7 @@ function NewPostComponent () {
             formData.append('postTitle', post.postTitle)
             formData.append('postDescription', post.postDescription)
             formData.append('postCategory', post.postCategory)
+            // formData.append('postDate', today)
 
             dispatch(createPost(formData))
             navigate("/blogs")
